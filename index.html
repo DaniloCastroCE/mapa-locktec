@@ -1,0 +1,755 @@
+﻿<!--
+    Modificado: 23/09/2024
+    Criado no dia 08/09/2024 
+    por Danilo Castro CE
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Danilo Castro CE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condomínios da Locktec (Fortaleza) - Em construção</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style rel="stylesheet" type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #map {
+            height: 100vh;
+        }
+
+        .leaflet-tooltip {
+            padding: 0 1px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 12px;
+            font-family: "Verdana", "Arial";
+            color: blue;
+        }
+
+        #logo-box {
+            position: absolute;
+            z-index: 9999;
+            right: 2px;
+            top: 2px;
+
+        }
+
+        #logo-box img {
+            object-fit: fill;
+            opacity: 0.6;
+            width: 150px;
+            height: auto;
+        }
+
+        .boxBtnInp {
+            position: absolute;
+            z-index: 999;
+            left: 50px;
+            top: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+
+        li {
+            max-width: 350px;
+            padding: 8px 4px;
+            word-wrap: break-word;
+        }
+
+        li:hover {
+            background-color: rgba(167, 199, 231, 0.9);
+        }
+
+        .boxBtnInp input[type='text'] {
+            width: 250px;
+        }
+
+        .boxBusca {
+            display: inline-block;
+        }
+
+        #buscaInp {
+            padding: 4px 3px;
+        }
+
+        .boxFile {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            z-index: 999;
+        }
+
+        .downJson {
+            left: 80px;
+        }
+
+        #fileInp {
+            display: none;
+        }
+
+        #btnDonwJSON {
+            display: none;
+        }
+
+        .labelButton {
+            border: 1px solid black;
+            border-radius: 2px;
+            padding: 1px;
+            cursor: pointer;
+            font-size: 10px;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+        }
+
+        .labelButton:hover {
+            background-color: rgb(167, 199, 231);
+        }
+
+        #sidePanel {
+            position: fixed;
+            top: 0;
+            right: -500px;
+            /* Escondido fora da tela inicialmente */
+            width: 390px;
+            height: 100%;
+            background-color: #f1f1f1;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: right 0.5s ease;
+            /* Transição suave */
+            padding: 20px;
+            z-index: 9999;
+            overflow: auto;
+        }
+
+        #sidePanel.show {
+            right: 0;
+            /* Quando a classe 'show' é adicionada, o painel desliza para dentro */
+
+        }
+
+        #closeSidePanel {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #closeSidePanel span {
+            width: 100%;
+            height: 100%;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 700;
+        }
+
+        #conteudoSidePanel {
+            margin-top: 10px;
+        }
+
+
+        #rodape {
+            z-index: 999;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            opacity: 0.6;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="logo-box">
+        <img src="https://locktec.com.br/wp-content/uploads/2023/12/cropped-logo-locktec.png" alt="Logo">
+    </div>
+
+    <div class="boxBtnInp">
+        <table>
+            <tr>
+                <td>
+                    <div class="boxBusca">
+                        <input id="buscaInp" type="text" placeholder="Digite o nome do condomínio">
+                </td>
+                <td>
+                    <button type="button" onclick="funcControlSidePanel('tools', {})">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#273b6e">
+                            <path
+                                d="M756-120 537-339l84-84 219 219-84 84Zm-552 0-84-84 276-276-68-68-28 28-51-51v82l-28 28-121-121 28-28h82l-50-50 142-142q20-20 43-29t47-9q24 0 47 9t43 29l-92 92 50 50-28 28 68 68 90-90q-4-11-6.5-23t-2.5-24q0-59 40.5-99.5T701-841q15 0 28.5 3t27.5 9l-99 99 72 72 99-99q7 14 9.5 27.5T841-701q0 59-40.5 99.5T701-561q-12 0-24-2t-23-7L204-120Z" />
+                        </svg>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="items-lista"></ul>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div id="map"></div>
+    <div id="sidePanel">
+        <div id="closeSidePanel" onclick="funcControlSidePanel('remove', {})">
+            <span type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#EA3323">
+                    <path
+                        d="m366-310 114-114 114 114 56-56-114-114 114-114-56-56-114 114-114-114-56 56 114 114-114 114 56 56ZM200-200v-560 560-1 1Zm0 80q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v334q-19-7-39-10.5t-41-3.5v-320H200v560h320q0 21 3.5 41t10.5 39H200Zm560 80-56-56 63-64H600v-80h167l-63-64 56-56 160 160L760-40Z" />
+                </svg>
+            </span>
+        </div>
+        <div id="conteudoSidePanel"></div>
+    </div>
+    <div id="rodape">
+        <span>by: @DaniloCastroCE (2024)</span>
+    </div>
+    <div class="boxFile">
+        <label id='labelButton' class='labelButton' for="fileInp">Abrir JSON</label>
+        <input id="fileInp" type="file" accept=".json">
+    </div>
+    <div class="boxFile downJson" style="display:none;">
+        <label id='labelDaixarJson' class="labelButton" for="btnDonwJSON">Donwload JSON</label>
+        <button id='btnDonwJSON' onclick="baixarJsonLocais()" type="button"></button>
+    </div>
+    <script type="text/javascript">
+        var controleSidePanel = { on: false, status: '', nome: '', markerId: '', arrayMarkerAdd: [] }
+
+        //Ecopo para criar o mapa da tela
+        var map = L.map('map').setView([-3.74214, -38.49207], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        document.querySelector('#fileInp').addEventListener('change', function (event) {
+            const file = event.target.files[0]
+            if (file) {
+                const reader = new FileReader()
+                reader.onload = function (e) {
+                    try {
+                        const obj = JSON.parse(e.target.result)
+                        addMarkerAll(obj)
+
+                    } catch (err) {
+                        console.log(`Erro no fileInp: \n${err}`)
+                    }
+                }
+                reader.readAsText(file, 'UTF-8')
+            }
+        })
+
+
+
+        /*
+        const toggleButton = document.getElementById('toggle');
+        const sidePanel = document.getElementById('sidePanel');
+         
+        toggleButton.addEventListener('click', () => {
+            sidePanel.classList.toggle('show'); // Adiciona ou remove a classe 'show' para o efeito deslizante
+        });
+        */
+
+        var arrayMarker = []
+
+        var locais = [
+            { nome: "LOCKTEC", lat: "-3.73030", lon: "-38.48041", end: { rua: 'Oliveira Viana', num: '77', bairro: "Vicente Pinzon" } },
+            { nome: "ÁGUA FRIA", lat: "-3.77448", lon: "-38.45892", end: { rua: "Cidade Ecológica", num: "80", bairro: "Edson Queiroz" } },
+            { nome: "ALBERTO VIANA", lat: "-3.72639", lon: "-38.50235", end: { rua: "Silvia Jatahy", num: "160", bairro: "Aldeota" } },
+      { nome: "ANGRA", lat: "-3.72425", lon: "-38.48632", end: { rua: "Senador Machado", num: "185", bairro: "Mucuripe" } },
+            { nome: "ANTÚRIOS", lat: "-3.742", lon: "-38.50338", end: { rua: "Joaquim Nabuco", num: "1889", bairro: "Aldeota" } },
+            { nome: "ARTHUR BERNARDES", lat: "-3.80975", lon: "-38.47024", end: { rua: "Avenida Presidente Arthur Bernardes", num: "2757", bairro: "José de Alencar" } },
+            { nome: "ÁSIA IMPERIAL", lat: "-3.80825", lon: "-38.47116", end: { rua: "Rafael Tobias", num: "2185", bairro: "José de Alencar" } },
+            { nome: "ASPEN", lat: "-3.74242", lon: "-38.49181", end: { rua: "Travessa Monsehor Catão", num: "1200", bairro: "Aldeota" } },
+            { nome: "ATALAIA", lat: "-3.72812", lon: "-38.49893", end: { rua: "Ana Bilhar", num: "123", bairro: "Meireles" } },
+            { nome: "ATHALANTA", lat: "-3.72947", lon: "-38.49408", end: { rua: "Leonardo Mota", num: "340", bairro: "Meireles" } },
+            { nome: "ATALANTA", lat: "-3.81526", lon: "-38.46841", end: { rua: "Avenida Odilon Guimarães", num: "3740", bairro: "Curió" } },
+            { nome: "AVALLON HILL", lat: "-3.74853", lon: "-38.52672", end: { rua: "Monsenhor Otávio de Castro", num: "677", bairro: "Fátima" } },
+            { nome: "BARÃO DE ARACATI", lat: "-3.732836596779856", lon: "-38.511850547193426", end: { rua: "Barão de Aracati", num: "1291", bairro: "Aldeota" } },
+            { nome: "BARCELONA", lat: "-3.73297", lon: "-38.51442", end: { rua: "Antônio Augusto", num: "1450", bairro: "Meireles" } },
+            { nome: "BARRAMAR E BARRASOL", lat: "-3.73236", lon: "-38.47993", end: { rua: "Engenheiro Santana Junior", num: "333", bairro: "Vicente Pinzon" } },
+            { nome: "BELIZE", lat: "-3.7612067962012357", lon: "-38.49033457663506", end: { rua: "Rua Professor Jacinto Botelho", num: "425", bairro: "Edson Queiroz" } },
+            { nome: "BELLE MONDUBIM", lat: "-3.83446", lon: "-38.58757", end: { rua: "Nossa Senhora Aparecida", num: "300", bairro: "Aracapé" } },
+            { nome: "BERNARD TAPIE", lat: "-3.72913", lon: "-38.49656", end: { rua: "Ana Bilhar", num: "379", bairro: "Meireles" } },
+            { nome: "BERNINE", lat: "-3.7418", lon: "-38.47852", end: { rua: "Joaquim Lima", num: "950", bairro: "Papicu" } },
+            { nome: "BERNINI", lat: "-3.72958", lon: "-38.50728", end: { rua: "Avenida Rui Barbosa", num: "733", bairro: "Meireles" } },
+            { nome: "BESANÇON", lat: "-3.72978", lon: "-38.49288", end: { rua: "Vicente Leite", num: "389", bairro: "Meireles" } },
+            { nome: "BRISAS DO JACAREY", lat: "-3.7997", lon: "-38.49524", end: { rua: "Chico Lemos", num: "1405", bairro: "Parque Iracema" } },
+            { nome: "BROMELIAS", lat: "-3.80796", lon: "-38.53531", end: { rua: "Rua das Carnaúbas", num: "560", bairro: "Passaré" } },
+            { nome: "BROOKSVILLE", lat: "-3.74111", lon: "-38.49242", end: { rua: "Coronel Jucá", num: "1000", bairro: "Aldeota" } },
+            { nome: "BUCKINGAHN", lat: "-3.72608", lon: "-38.50164", end: { rua: "José VIlar", num: "180", bairro: "Meireles" } },
+            { nome: "CARMEL ATLANTICO", lat: "-3.74693", lon: "-38.45665", end: { rua: "Avenida Trajano de Medeiro", num: "3233", bairro: "Vicente Pinzon" } },
+            { nome: "CASTELLAR II", lat: "-3.81077", lon: "-38.52277", end: { rua: "Crisanto Arruda", num: "150", bairro: "Passaré" } },
+            { nome: "CASTELLAR III", lat: "-3.81341", lon: "-38.52847", end: { rua: "Pedro Verissimo", num: "3535", bairro: "Passaré" } },
+            { nome: "CATAMARÃ", lat: "-3.72920", lon: "-38.49087", end: { rua: "Avenida Senador Virgilio Távora", num: "30", bairro: "Meireles" } },
+            { nome: "COLINA DE ROMA", lat: "-3.72821", lon: "-38.48914", end: { rua: "Barbalha", num: "300", bairro: "Meireles" } },
+            { nome: "CONCORDIA", lat: "-3.7485520777941113", lon: "-38.51524919555188", end: { rua: "Soriano Albuquerque", num: "575", bairro: "Joaquim Távora" } },
+            { nome: "COSTA BARRETO", lat: "-3.74714", lon: "-38.50504", end: { rua: "Joaquim Nabuco", num: "2485", bairro: "Dionisio Torres" } },
+            { nome: "CYNTHIA", lat: "-3.7471209534637", lon: "-38.46760909518526", end: { rua: "Vilebaldo Aguiar", num: "2300", bairro: "Cocó" } },
+            { nome: "DAMASCO", lat: "-3.76528", lon: "-38.55102", end: { rua: "Irmã Bazet", num: "760", bairro: "Montese" } },
+            { nome: "DIVA MARINHO", lat: "-3.74654", lon: "-38.48406", end: { rua: "Arquiteto Reginaldo Rangel", num: "55", bairro: "Cocó" } },
+            { nome: "DOM BOSCO", lat: "-3.80836", lon: "-38.56875", end: { rua: "26° Batalhão", num: "291", bairro: "Mondubim" } },
+            { nome: "ETA CARENAE", lat: "-3.7299", lon: "-38.49409", end: { rua: "Leonardo Mota", num: "303", bairro: "Meireles" } },
+            { nome: "EUROPA BOULEVARD", lat: "-3.8033368158989425", lon: "-38.47320875034511", end: { rua: "Bill Cartaxo", num: "1725", bairro: "Sapiranga" } },
+            { nome: "EUSEBIO VILLE", lat: "-3.87370", lon: "-38.46511", end: { rua: "Luiz Pio Campina", num: "41", bairro: "Tamatanduba" } },
+            { nome: "FLAMBOYANT", lat: "-3.79012", lon: "-38.46516", end: { rua: "Nadir Saboya", num: "750", bairro: "Sapiranga" } },
+            { nome: "FREITAS", lat: "-3.74568", lon: "-38.48011", end: { rua: "Andrade Furtado", num: "1060", bairro: "Cocó" } },
+            { nome: "G TORRES", lat: "-3.72551", lon: "-38.5107", end: { rua: "Idelfonso Albano", num: "525", bairro: "Meireles" } },
+            { nome: "GENOVAVENEZA", lat: "-3.734", lon: "-38.49113", end: { rua: "Professor Dias da Rocha", num: "482", bairro: "Meireles" } },
+            { nome: "GERMANA GURGELL III", lat: "-3.86281", lon: "-38.45863", end: { rua: "Avenida José Moraes de Almeida", num: "844", bairro: "Coaçu" } },
+            { nome: "GIARDINO DI FAZANO", lat: "-3.7612506952300575", lon: "-38.48392683861385", end: { rua: "Ministro Eduardo Ellery Barreira", num: "60", bairro: "Guararapes" } },
+            { nome: "HELDER LEITE JUNIOR", lat: "-3.80394", lon: "-38.53799", end: { rua: "Rua dos Sabías", num: "103", bairro: "Passaré" } },
+            { nome: "HILMAR FALÇÃO", lat: "-3.7254", lon: "-38.51214", end: { rua: "Antônio Augusto", num: "570", bairro: "Meireles" } },
+            { nome: "HYDE PARK", lat: "-3.74467", lon: "-38.50211", end: { rua: "Dom Expedito Lopes", num: "2577", bairro: "Dionisio Torres" } },
+            { nome: "IDEZITH CÂMARA", lat: "-3.79065", lon: "-38.46074", end: { rua: "José Moacir Bezerra", num: "1111", bairro: "Sapiranga" } },
+            { nome: "ILHA BELA", lat: "-3.75611", lon: "-38.53244", end: { rua: "General Silva Junior", num: "800", bairro: "Fátima" } },
+            { nome: "IMPERIAL MARAPONGA", lat: "-3.78609", lon: "-38.56153", end: { rua: "José Meneleu", num: "760", bairro: "Itaperi" } },
+            { nome: "IPANEMA", lat: "-3.72706", lon: "-38.46558", end: { rua: "Visconde de Cairu", num: "720", bairro: "Jardim Guanabara" } },
+            { nome: "IRACEMA ROCHA", lat: "-3.70454", lon: "-38.59143", end: { rua: "Avenida Coronel Carvalho", num: "240", bairro: "Vila Velha" } },
+            { nome: "ISOLA DI CAPRI", lat: "-3.72874", lon: "-38.50308", end: { rua: "Tenente Amauri Pi", num: "380", bairro: "Aldeota" } },
+            { nome: "ITAMARACA", lat: "-3.74392", lon: "-38.47973", end: { rua: "Doutor Gilberto Studart", num: "955", bairro: "Cocó" } },
+            { nome: "ITAPEMA", lat: "-3.7371177377443106", lon: "-38.47361689147016", end: { rua: "Amélia Benebien", num: "333", bairro: "Papicu" } },
+            { nome: "JARDIM DAS FLORES", lat: "-3.85872", lon: "-38.64347", end: { rua: "Antônio Perreira do Nascimento", num: "160", bairro: "Luzano Viana" } },
+            { nome: "JARDINS PASSARÉ", lat: "-3.80324", lon: "-38.53591", end: { rua: "Avenida Heróis do Acre", num: "801", bairro: "Passaré" } },
+            { nome: "JARDINS SAMARIA I", lat: "-3.80476", lon: "-38.53285", end: { rua: "Avenida Prudente Brasil", num: "180", bairro: "Passaré" } },
+            { nome: "JEOVÁ MATOS", lat: "-3.74285", lon: "-38.48698", end: { rua: "Avenida Engenheiro Santana Junior", num: "2360", bairro: "Cocó" } },
+            { nome: "JEQUITIBA", lat: "-3.81963", lon: "-38.49808", end: { rua: "Madre Ana Couto", num: "401", bairro: "Messejana" } },
+            { nome: "JOSE CARLOS DE PINHO", lat: "-3.730594347550627", lon: "-38.49748466253304", end: { rua: "Visconde de Mauá", num: "501", bairro: "Meireles" } },
+            { nome: "KARIBE", lat: "-3.73516", lon: "-38.48291", end: { rua: "Raimundo Oliveira Filho", num: "153", bairro: "Varjota" } },
+            { nome: "KELLY", lat: "-3.74117", lon: "-38.56687", end: { rua: "Moreira de Sousa", num: "525", bairro: "Parquelândia" } },
+            { nome: "LA VIDA PARQUE", lat: "-3.90915", lon: "-38.44785", end: { rua: "Avenida Noe Leite de Freitas", num: "393", bairro: "Lagoinha" } },
+            { nome: "LAGO JACAREY", lat: "-3.79868", lon: "-38.49292", end: { rua: "Máximo Linhares", num: "299", bairro: "Cambeba" } },
+            { nome: "LARA", lat: "-3.72976", lon: "-38.49462", end: { rua: "Ana Bilhar", num: "601", bairro: "Meireles" } },
+            { nome: "LE MAN'S", lat: "-3.74846", lon: "-38.46742", end: { rua: "Manuel Queiros", num: "460", bairro: "Cocó" } },
+            { nome: "LIBERTY PLACE", lat: "-3.73254", lon: "-38.48451", end: { rua: "Tavares Coutinho", num: "2050", bairro: "Varjota" } },
+            { nome: "LIDIA BRIGIDO - OURO BRANCO", lat: "-3.78916", lon: "-38.48484", end: { rua: "Lidia Brigido", num: "151", bairro: "Parque Manibura" } },
+            { nome: "LIDIANE", lat: "-3.7383132609935616", lon: "-38.56344639910428", end: { rua: "Amadeu Furtado", num: "289", bairro: "Parquelândia" } },
+            { nome: "LISBOA", lat: "-3.74084", lon: "-38.5042", end: { rua: "Tibúrcio Cavalcante", num: "1848", bairro: "Aldeota" } },
+            { nome: "LOS ANGELES", lat: "-3.73570", lon: "-38.48154", end: { rua: "Paulo Morais", num: "303", bairro: "Varjota" } },
+            { nome: "LUIS TEIXEIRA", lat: "-3.7377", lon: "-38.51041", end: { rua: "Catão Mamede", num: "237", bairro: "Aldeota" } },
+            { nome: "LUIZ VIDAL", lat: "-3.72766", lon: "-38.51138", end: { rua: "Idelfonso Albano", num: "777", bairro: "Meireles" } },
+            { nome: "MANSÃO BARCELONA", lat: "-3.73148", lon: "-38.47892", end: { rua: "Professor Heráclito", num: "313", bairro: "Vicente Pinzon" } },
+            { nome: "MAR DEL PLATA", lat: "-3.73223", lon: "-38.57101", end: { rua: "Edgar Falcão", num: "130", bairro: "Presidente Kennedy" } },
+            { nome: "MARBELA", lat: "-3.74924", lon: "-38.5314", end: { rua: "Mário Mamede", num: "1300", bairro: "Fátima" } },
+            { nome: "MARC CHAGALL", lat: "-3.74418", lon: "-38.49091", end: { rua: "Caroline Sucupira", num: "Aldeota", bairro: "1478" } },
+            { nome: "MARIA CANDIA PINHEIRO", lat: "-3.72823", lon: "-38.49196", end: { rua: "Paula Barros", num: "345", bairro: "Meireles" } },
+            { nome: "MARIA JOSE", lat: "-3.73765", lon: "-38.51707", end: { rua: "João Cordeiro", num: "1991", bairro: "Piedade" } },
+            { nome: "MARIA NATIVIDADE", lat: "-3.73785", lon: "-38.51442", end: { rua: "Barbara de Alencar", num: "1101", bairro: "Aldeota" } },
+            { nome: "MARNE CAVALCANTE LINS", lat: "-3.75485", lon: "-38.52591", end: { rua: "Campo Amor Rocha", num: "188", bairro: "Fátima" } },
+            { nome: "MARQUES DE VALÊNCIA", lat: "-3.733173131364795", lon: "-38.45727162334497", end: { rua: "Avenida Zeze Diogo", num: "2970", bairro: "Praia do Futuro" } },
+            { nome: "MAXMILIAN", lat: "-3.7379208005077174", lon: "-38.48972807207252", end: { rua: "Maria Tomásia", num: "1271", bairro: "Aldeota" } },
+            { nome: "MEGAVILLE", lat: "-3.74803", lon: "-38.58533", end: { rua: "Rui Monte", num: "1070", bairro: "Dom Lustosa" } },
+            { nome: "MEIRELES COMPACT", lat: "-3.72657", lon: "-38.50806", end: { rua: "Deputado Moreira da Rocha", num: "557", bairro: "Meireles" } },
+            { nome: "MELISSA", lat: "-3.743404172602655", lon: "-38.50650617719093", end: { rua: "Dom Expedito Lopres", num: "1956", bairro: "Aldeota" } },
+            { nome: "MIRTES ANTUNES", lat: "-3.801400504981381", lon: "-38.527831976784974", end: { rua: "Fiscal Assis Saraiva", num: "1001", bairro: "Boa Vista" } },
+            { nome: "MIRZA LINHARES", lat: "-3.7448351478755186", lon: "-38.48233863550432", end: { rua: "Andrade Furtado", num: "799", bairro: "Cocó" } },
+            { nome: "MOISES MENDES", lat: "-3.74819", lon: "-38.51044", end: { rua: "Barão Studart", num: "2765", bairro: "Dionisio Torres" } },
+            { nome: "MONTE VERDE", lat: "-3.82609", lon: "-38.47599", end: { rua: "Avenida Professor José Arthur de Carvalho", num: "400", bairro: "Lagoa Redonda" } },
+            { nome: "MONTE VILLAGE", lat: "-3.800775965006298", lon: "-38.56759031296393", end: { rua: "Rúbens Monte", num: "520", bairro: "Jardim Cearense" } },
+            { nome: "MONTERREY", lat: "-3.73601", lon: "-38.50985", end: { rua: "Afonso Celso", num: "225", bairro: "Aldeota" } },
+            { nome: "NEBADON", lat: "-3.75418", lon: "-38.52889", end: { rua: "Avenida Depudato Oswaldo Studart", num: "362", bairro: "Fátima" } },
+            { nome: "NORTH VILLAGE", lat: "-3.7296208747570465", lon: "-38.56555506798795", end: { rua: "Margarida Maria", num: "1000", bairro: "Presidente Kennedy" } },
+            { nome: "NORTHVILLE", lat: "-3.73693", lon: "-38.54767", end: { rua: "Padre Guerra", num: "417", bairro: "Parque Araxá" } },
+            { nome: "NOSSA SENHORA APARECIDA", lat: "-3.76558", lon: "-38.54779", end: { rua: "Venezuela", num: "120", bairro: "Montese" } },
+            { nome: "NOVO LINDO PARQUE", lat: "-3.75302", lon: "-38.50318", end: { rua: "Isac Amaral", num: "751", bairro: "Aldeota" } },
+            { nome: "OMMI", lat: "-3.73354", lon: "-38.49297", end: { rua: "Pereira Valente", num: "945", bairro: "Meireles" } },
+            { nome: "PALAZZIO TICIANA", lat: "-3.74048", lon: "-38.49515", end: { rua: "Paula Ney", num: "365", bairro: "Aldeota" } },
+            { nome: "PARAÍSO", lat: "-3.72828", lon: "-38.48198", end: { rua: "Canindé", num: "797", bairro: "Varjota" } },
+            { nome: "PARAÍSO DA MARAPONGA", lat: "-3.79661", lon: "-38.56744", end: { rua: "Francisco Glicéiro", num: "722", bairro: "Maraponga" } },
+            { nome: "PARK VILLAGE", lat: "-3.77441", lon: "-38.49187", end: { rua: "Maria Alice Ferraz", num: "1314", bairro: "Engenheiro Luciano Cavalcante" } },
+            { nome: "PARNASO", lat: "-3.73201", lon: "-38.50182", end: { rua: "Pereira Filgueiras", num: "2400", bairro: "Aldeota" } },
+            { nome: "PARQUE DOS COQUEIROS", lat: "-3.7892", lon: "-38.57228", end: { rua: "Avenida Bibio Frota", num: "571", bairro: "Parangaba" } },
+            { nome: "PAULO QUEZADO", lat: "-3.73302", lon: "-38.4678", end: { rua: "Avenida Engenheiro Luiz Vieira", num: "320", bairro: "Praia do Futuro I" } },
+            { nome: "PETIT PALAIS", lat: "-3.72532", lon: "-38.50824", end: { rua: "Carlos Vasconcelos", num: "355", bairro: "Meireles" } },
+            { nome: "PIAZZA NOVANA", lat: "-3.727011159683257", lon: "-38.55264964739419", end: { rua: "Henrique Autran", num: "673", bairro: "Monte Castelo" } },
+            { nome: "PORT PRINCE", lat: "-3.7325", lon: "-38.50153", end: { rua: "Tibúrcio Cavalcanti", num: "838", bairro: "Aldeota" } },
+            { nome: "PORTAL DOS VENTOS", lat: "-3.7911884605677226", lon: "-38.45911646558612", end: { rua: "Corrêa Lima", num: "2150", bairro: "Edson Queiroz" } },
+            { nome: "PORTO PRINCIPE", lat: "-3.8084", lon: "-38.53548", end: { rua: "Rua das Carnaúbas", num: "570", bairro: "Passaré" } },
+            { nome: "PRUDENTE BRASIL", lat: "-3.8032423283238384", lon: "-38.535179187121464", end: { rua: "Avenida Heróis do Acre", num: "725", bairro: "Passaré" } },
+            { nome: "RAIMUNDO MORAES", lat: "-3.75082", lon: "-38.56065", end: { rua: "Virato Ribeiro", num: "744", bairro: "Bela Vista" } },
+            { nome: "RAMOS DE LUZ", lat: "-3.7523", lon: "-38.52079", end: { rua: "Avenida Visconde do Rio Branco", num: "3556", bairro: "Fátima" } },
+            { nome: "RECANTO DOS VENTOS", lat: "-3.8311", lon: "-38.48809", end: { rua: "Pedro II", num: "300", bairro: "Messejana" } },
+            { nome: "RENATA ROCHA", lat: "-3.70785", lon: "-38.59484", end: { rua: "27", num: "190", bairro: "Vila Velha" } },
+            { nome: "RIVADAVIA", lat: "-3.74709", lon: "-38.46706", end: { rua: "Manuel Queiroz", num: "260", bairro: "Cocó" } },
+            { nome: "RIVER PARK", lat: "-3.76061", lon: "-38.47898", end: { rua: "Professor Wilson Aguiar", num: "357", bairro: "Edson Queiroz" } },
+            { nome: "RIVIEIRA", lat: "-3.72563", lon: "-38.46254", end: { rua: "Visconde de Cairu", num: "200", bairro: "Vicente Pinzon" } },
+            { nome: "SAFIRA", lat: "-3.73522", lon: "-38.46924", end: { rua: "Coronel José Aurelio Câmara", num: "1400", bairro: "Vicente Pinzon" } },
+            { nome: "SAINT MORITZ", lat: "-3.74643", lon: "-38.47511", end: { rua: "Bento Albuquerque", num: "1550", bairro: "Cocó" } },
+            { nome: "SALINAS", lat: "-3.75834", lon: "-38.49079", end: { rua: "Professor Jacinto Botelho", num: "120", bairro: "Guararapes" } },
+            { nome: "SAUSTIANO", lat: "-3.76048", lon: "-38.48562", end: { rua: "Francisco Xerez", num: "200", bairro: "Guararapes" } },
+            { nome: "SAN ISIDRO", lat: "-3.73655", lon: "-38.53249", end: { rua: "Senador Pompeu", num: "2030", bairro: "José Bonifácio" } },
+            { nome: "SAN MATHEUS", lat: "-3.79047", lon: "-38.46378", end: { rua: "Olegário Memória", num: "2973", bairro: "Sapiranga" } },
+            { nome: "SAN MATHEUS", lat: "-3.73615", lon: "-38.52287", end: { rua: "Rocha Lima", num: "135", bairro: "Centro" } },
+            { nome: "SAN THIAGO", lat: "-3.73357", lon: "-38.4791", end: { rua: "Avenida Engenheiro Alberto Sá", num: "231", bairro: "Papicu" } },
+            { nome: "SANTA CLARA", lat: "-3.7534435395608066", lon: "-38.571102851724746", end: { rua: "Piauí", num: "1390", bairro: "Pici" } },
+            { nome: "SANTOS DUMONT", lat: "-3.74171", lon: "-38.48183", end: { rua: "Avenida Santos Dumont", num: "5600", bairro: "Aldeota" } },
+            { nome: "SANTOS DUMONT CENTER", lat: "-3.7306", lon: "-38.51546", end: { rua: "Avenida Santos Dumont", num: "905", bairro: "Centro" } },
+            { nome: "SARAH", lat: "-3.73231", lon: "-38.47895", end: { rua: "Pascoal de Castro Alves", num: "332", bairro: "Vicente Pinzon" } },
+            { nome: "SÃO PAULO", lat: "-3.72153", lon: "-38.54106", end: { rua: "Avenida Filomeno Gomes", num: "733", bairro: "Jacarecanga" } },
+            { nome: "SECULUS", lat: "-3.81042", lon: "-38.52558", end: { rua: "Doutor Pedro Sampaio", num: "250", bairro: "Passaré" } },
+            { nome: "SOPHIA MARINHO", lat: "-3.72549", lon: "-38.50589", end: { rua: "Thomaz Pompeu / Avenida Rui Barbosa", num: "261/323", bairro: "Meireles" } },
+            { nome: "SUN CITY", lat: "-3.7376621073449687", lon: "-38.48211016122009", end: { rua: "Professor Sila Ribeiro", num: "400", bairro: "Papicu" } },
+            { nome: "TAIAMA", lat: "-3.74572", lon: "-38.50949", end: { rua: "Silva Paulet", num: "2500", bairro: "Aldeota" } },
+            { nome: "TERRACES LA MAISON", lat: "-3.72768", lon: "-38.49812", end: { rua: "Osvaldo Cruz", num: "250", bairro: "Meireles" } },
+            { nome: "TERRACOTA", lat: "-3.73206", lon: "-38.49749", end: { rua: "Perreira Valente", num: "501", bairro: "Meireles" } },
+            { nome: "THIAGO ALBURQUERQUE", lat: "-3.73937", lon: "-38.50376", end: { rua: "Tibúrcio Cavalcante", num: "1660", bairro: "Aldeota" } },
+            { nome: "TOSCANA", lat: "-3.81609", lon: "-38.48321", end: { rua: "Travessa Neném", num: "120", bairro: "Cambeba" } },
+            { nome: "TORRICELI", lat: "-3.73959", lon: "-38.49738", end: { rua: "Leonardo Mota", num: "1520", bairro: "Aldeota" } },
+            { nome: "TUIUTI", lat: "-3.73259", lon: "-38.50488", end: { rua: "Silva Paulet", num: "856", bairro: "Aldeota" } },
+            { nome: "VENEZA", lat: "-3.74119", lon: "-38.48004", end: { rua: "Joaquim Lim", num: "699", bairro: "Papicu" } },
+            { nome: "VENEZA", lat: "-3.76725", lon: "-38.53588", end: { rua: "Almirante Rufino", num: "665", bairro: "Vila União" } },
+            { nome: "VERONA", lat: "-3.87863", lon: "-38.46446", end: { rua: "Nossa Senhora de Nazaré", num: "310", bairro: "Tamatanduba" } },
+            { nome: "VILA EUSÉBIO", lat: "-3.88241", lon: "-38.45585", end: { rua: "Vicente Leitão", num: "819", bairro: "Centro" } },
+            { nome: "VILA ROMANA", lat: "-3.80045", lon: "-38.52946", end: { rua: "Corumbá", num: "479", bairro: "Boa Vista" } },
+            { nome: "VILAS LOBO", lat: "-3.73212", lon: "-38.46152", end: { rua: "Oliveira FIlho", num: "1680", bairro: "Vicente Pinzon" } },
+            { nome: "VILLA CENTAURUS", lat: "-3.74799", lon: "-38.49745", end: { rua: "Professor Francisco Gonçalves", num: "355 e 375", bairro: "Dionisio Torres" } },
+            { nome: "VILLA RICA", lat: "-3.7452825798737215", lon: "-38.50260050848089", end: { rua: "Avenida Antônio Sales", num: "2377", bairro: "Joaquim Tavora" } },
+            { nome: "VILLA ROMANZA", lat: "-3.77103", lon: "-38.47735", end: { rua: "Rua do Corrente", num: "317", bairro: "Edson Queiroz" } },
+            { nome: "VILLAGE ÁGUA FRIA (QUADRA 02)", lat: "-3.77633", lon: "-38.47298", end: { rua: "F", num: "101", bairro: "Edson Queiroz" } },
+            { nome: "VILLAGE PORTO REAL", lat: "-3.8209853746938887", lon: "-38.55543574662813", end: { rua: "D", num: "50", bairro: "Parque Dois Irmãos" } },
+            { nome: "VILLAGE ÁGUA FRIA (QUADRA 01)", lat: "-3.77551", lon: "-38.47273", end: { rua: "F", num: "50", bairro: "Edson Queiroz" } },
+            { nome: "VISCONDE DE CAUYPE", lat: "-3.73637", lon: "-38.53483", end: { rua: "Avenida da Universidade", num: "2101", bairro: "Benfica" } },
+            { nome: "VISCONDE DE MAUÁ", lat: "-3.73046", lon: "-38.49763", end: { rua: "Visconde de Mauá", num: "500", bairro: "Meireles" } },
+            { nome: "VIRGEM DE FÁTIMA", lat: "-3.73411", lon: "-38.54274", end: { rua: "Bela Cruz", num: "2200", bairro: "Farias Brito" } },      
+        ]
+
+
+        //Adicionar um marcador (market) no mapa
+        function addMarkerAll(array) {
+            removeMarkerAll(arrayMarker)
+            arrayMarker = []
+
+            array.forEach(obj => {
+                var marker = L.marker([obj.lat, obj.lon], { title: obj.nome }).addTo(map)
+                marker.bindPopup(`
+            <b>${obj.nome}</b><br>
+            ${obj.end.rua}, ${obj.end.num}, ${obj.end.bairro}
+        `)
+
+                marker.bindTooltip(
+                    `${obj.nome[0].toUpperCase()}${obj.nome.substr(1).toLowerCase()}`,
+                    {
+                        permanent: true,
+                        direction: 'top'
+
+                    }
+                )
+
+                marker.on('click', function () {
+                    onClickMarker({ local: obj, marker: marker })
+                })
+
+                var nomeSimple = (obj.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, '')).toLowerCase()
+                arrayMarker.push(
+                    {
+                        nomeSimple: nomeSimple,
+                        local: obj,
+                        marker: marker
+                    }
+                )
+            });
+	try{
+		console.log(`Existe ${arrayMarker.length} condomínios`)
+	}catch (err){
+
+	}
+
+        }
+
+        function removeMarkerAll(array) {
+            try {
+                array.forEach(el => {
+                    el.marker.remove()
+                })
+
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+
+
+        //Função para Buscar marker
+        function buscarMarker(event) {
+            var itemProcurado = event.target.value
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .trim()
+
+            var filterItems = arrayMarker.filter(item => item.nomeSimple.toLowerCase().includes(itemProcurado))
+
+            if (filterItems.length !== arrayMarker.length) {
+
+                const list = document.querySelector('#items-lista')
+                list.innerHTML = ''
+                filterItems.forEach(items => {
+                    const li = document.createElement('li')
+                    li.innerHTML = `
+                <p>
+                    <b>${items.local.nome}</b><br>
+                    ${items.local.end.rua}, ${items.local.end.num} - ${items.local.end.bairro}
+                </p>
+            `
+                    li.addEventListener('click', function () {
+                        if (!controleSidePanel.on && controleSidePanel.status === '') {
+                            abrirItem(items)
+                            resetInpBusca()
+                        } else if (controleSidePanel.on && controleSidePanel.status === 'tools') {
+                            addConteudoSidePanel('addMarker', items)
+                        } else if (controleSidePanel.on) {
+                            addConteudoSidePanel('local', items)
+                            resetInpBusca()
+		abrirItem(items)
+                        }
+                    })
+
+                    list.appendChild(li)
+
+                })
+            } else {
+                resetInpBusca()
+            }
+
+        }
+
+
+        document.querySelector('#buscaInp').addEventListener('input', function (event) {
+            buscarMarker(event)
+        })
+
+        function resetInpBusca() {
+            const list = document.querySelector('#items-lista')
+            const inpBusca = document.querySelector("#buscaInp")
+            list.innerHTML = ''
+            inpBusca.value = ''
+        }
+
+
+
+        function funcControlSidePanel(op, obj) {
+            const sidePanel = document.getElementById('sidePanel');
+            const conteudoSidePanel = document.querySelector('#conteudoSidePanel')
+
+            switch (op) {
+                case 'control':
+                    if (!controleSidePanel.on && controleSidePanel.status === '') {
+                        controleSidePanel.on = true
+                        controleSidePanel.markerId = obj.marker._leaflet_id
+                        sidePanel.classList.toggle('show')
+                        addConteudoSidePanel('local', obj)
+
+                    } else if (controleSidePanel.markerId === obj.marker._leaflet_id && controleSidePanel.status === '') {
+                        controleSidePanel.on = false
+                        controleSidePanel.markerId = ''
+                        controleSidePanel.status = ''
+                        controleSidePanel.arrayMarkerAdd = []
+                        sidePanel.classList.toggle('show')
+                        conteudoSidePanel.innerHTML = ''
+
+                    } else if (controleSidePanel.on && controleSidePanel.status === '') {
+                        controleSidePanel.markerId = obj.marker._leaflet_id
+                        addConteudoSidePanel('local', obj)
+
+                    } else if (controleSidePanel.on && controleSidePanel.status === 'tools') {
+                        addConteudoSidePanel('addMarker', obj)
+                    }
+                    break;
+                case 'tools':
+                    if (!controleSidePanel.on) {
+                        controleSidePanel.on = true
+                        controleSidePanel.status = 'tools'
+                        sidePanel.classList.toggle('show')
+                        addConteudoSidePanel('tools')
+
+                    } else if (controleSidePanel.on && controleSidePanel.status === 'tools') {
+                        sidePanel.classList.toggle('show')
+                        controleSidePanel.on = false
+                        controleSidePanel.markerId = ''
+                        controleSidePanel.status = ''
+                        conteudoSidePanel.innerHTML = ''
+                        controleSidePanel.arrayMarkerAdd = []
+
+                    } else if (controleSidePanel.on && controleSidePanel.status !== 'tools') {
+                        controleSidePanel.status = 'tools'
+                        addConteudoSidePanel('tools')
+                    }
+                    break
+
+                case 'remove':
+                    sidePanel.classList.toggle('show')
+                    controleSidePanel.on = false
+                    controleSidePanel.markerId = ''
+                    controleSidePanel.status = ''
+                    controleSidePanel.arrayMarkerAdd = []
+                    conteudoSidePanel.innerHTML = ''
+                    resetInpBusca()
+                    break
+                default:
+                    break;
+            }
+        }
+
+        function addConteudoSidePanel(op, obj) {
+            const conteudoSidePanel = document.querySelector("#conteudoSidePanel")
+            switch (op) {
+                case 'local':
+                    var txt = `
+                <h2 style="text-align:center; cursor:pointer;" onclick="abrirItemLatLon('${obj.marker._latlng.lat}','${obj.marker._latlng.lng}')"><b>${obj.local.nome}</b></h2>
+                <p style="margin-top:40px; text-align: center; font-size: 20px;">
+                    ${obj.local.end.rua}, ${obj.local.end.num} <br>
+                    Bairro: ${obj.local.end.bairro}<br><br>
+                    <a href="http://www.google.com.br/search?q=
+                        ${encodeURIComponent(`${obj.local.lat}, ${obj.local.lon}`)}" target = "_blank">
+                        Latitude: ${obj.local.lat}<br>
+                        Longitude: ${obj.local.lon}
+                    </a><br>
+                </p>
+
+                <div style="margin-top:40px; text-align:center;">
+                    <a href="http://www.google.com.br/search?q=
+                            ${encodeURIComponent(`${obj.local.end.rua}, ${obj.local.end.num}, ${obj.local.end.bairro}`)}" target = "_blank">
+                            Pesquisar no Google
+                    </a>
+                </div>
+                `
+                    conteudoSidePanel.innerHTML = txt
+                    resetInpBusca()
+                    break
+                case 'tools':
+                    conteudoSidePanel.innerHTML = `
+                <h2 style='text-align:center;'><b> EXIBIR </b></h2>
+                    <button onclick="hiddenFerramentas()" type="button">Selecionados</button> 
+                    <button onclick="mostrarFerramentas()" type="button">Todos</button>
+                      <br>`
+                    break
+
+                case 'addMarker':
+                    var chkArray = false
+
+                    controleSidePanel.arrayMarkerAdd.forEach(el => {
+                        if (el._leaflet_id === obj.marker._leaflet_id) {
+                            chkArray = true
+                            return true
+                        }
+                    });
+
+                    if (!chkArray) {
+                        var txt = `
+                    <p style="margin-top:10px;">
+                        *<b>${obj.local.nome}</b>*<br>
+                            ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
+                    </p>
+                    `
+                        conteudoSidePanel.innerHTML += txt
+                        controleSidePanel.arrayMarkerAdd.push(obj.marker)
+                    }
+
+
+                    break
+                default:
+                    break;
+            }
+        }
+
+        function hiddenFerramentas() {
+            if (controleSidePanel.arrayMarkerAdd.length > 0) {
+
+                arrayMarker.forEach(el => {
+                    map.removeLayer(el.marker)
+                });
+
+                controleSidePanel.arrayMarkerAdd.forEach(el => {
+                    el.addTo(map)
+                });
+                resetInpBusca()
+            }
+        }
+
+        function mostrarFerramentas() {
+            arrayMarker.forEach(el => {
+                map.removeLayer(el.marker)
+            });
+
+            arrayMarker.forEach(el => {
+                el.marker.addTo(map)
+            })
+            const conteudoSidePanel = document.querySelector('#conteudoSidePanel')
+            conteudoSidePanel.innerHTML = ''
+            controleSidePanel.arrayMarkerAdd = []
+            addConteudoSidePanel('tools', {})
+            resetInpBusca()
+        }
+
+        //Função do click no marker que recebe um obj {local, marker}
+        function onClickMarker(obj) {
+            //map.setView(obj.marker.getLatLng(), 16)
+            funcControlSidePanel('control', obj)
+        }
+
+        function abrirItem(obj) {
+            map.setView(obj.marker.getLatLng(), 16)
+            obj.marker.openPopup()
+            resetInpBusca()
+
+        }
+
+	function abrirItemLatLon(lat,lon){
+		map.setView({lat,lon}, 16)
+	}
+
+        function baixarJsonLocais() {
+            const jsonString = JSON.stringify(locais, null, 2);
+
+            // 3. Criar um blob com o conteúdo JSON
+            const blob = new Blob([jsonString], { type: "application/json" });
+
+            // 4. Criar um link para download
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "Condomínios da Locktec.json";
+
+            // 5. Adicionar o link ao documento e simular o clique
+            document.body.appendChild(link);
+            link.click();
+
+            // 6. Remover o link após o clique
+            document.body.removeChild(link);
+
+        }
+
+        addMarkerAll(locais)
+    </script>
+</body>
+
+</html>
