@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Danilo Castro CE">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condomínios da Locktec (Fortaleza) - Em construção</title>
+    <title>Condomínios da Locktec - Em construção</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -283,10 +283,12 @@
         var arrayMarker = []
 
         var locais = [
+
+// Condomínios do estado do Ceará
             { nome: "LOCKTEC", lat: "-3.73030", lon: "-38.48041", end: { rua: 'Oliveira Viana', num: '77', bairro: "Vicente Pinzon" } },
             { nome: "ÁGUA FRIA", lat: "-3.77448", lon: "-38.45892", end: { rua: "Cidade Ecológica", num: "80", bairro: "Edson Queiroz" } },
             { nome: "ALBERTO VIANA", lat: "-3.72639", lon: "-38.50235", end: { rua: "Silvia Jatahy", num: "160", bairro: "Aldeota" } },
-      { nome: "ANGRA", lat: "-3.72425", lon: "-38.48632", end: { rua: "Senador Machado", num: "185", bairro: "Mucuripe" } },
+            { nome: "ANGRA", lat: "-3.72425", lon: "-38.48632", end: { rua: "Senador Machado", num: "185", bairro: "Mucuripe" } },
             { nome: "ANTÚRIOS", lat: "-3.742", lon: "-38.50338", end: { rua: "Joaquim Nabuco", num: "1889", bairro: "Aldeota" } },
             { nome: "ARTHUR BERNARDES", lat: "-3.80975", lon: "-38.47024", end: { rua: "Avenida Presidente Arthur Bernardes", num: "2757", bairro: "José de Alencar" } },
             { nome: "ÁSIA IMPERIAL", lat: "-3.80825", lon: "-38.47116", end: { rua: "Rafael Tobias", num: "2185", bairro: "José de Alencar" } },
@@ -440,7 +442,93 @@
             { nome: "VILLAGE ÁGUA FRIA (QUADRA 01)", lat: "-3.77551", lon: "-38.47273", end: { rua: "F", num: "50", bairro: "Edson Queiroz" } },
             { nome: "VISCONDE DE CAUYPE", lat: "-3.73637", lon: "-38.53483", end: { rua: "Avenida da Universidade", num: "2101", bairro: "Benfica" } },
             { nome: "VISCONDE DE MAUÁ", lat: "-3.73046", lon: "-38.49763", end: { rua: "Visconde de Mauá", num: "500", bairro: "Meireles" } },
-            { nome: "VIRGEM DE FÁTIMA", lat: "-3.73411", lon: "-38.54274", end: { rua: "Bela Cruz", num: "2200", bairro: "Farias Brito" } },      
+            { nome: "VIRGEM DE FÁTIMA", lat: "-3.73411", lon: "-38.54274", end: { rua: "Bela Cruz", num: "2200", bairro: "Farias Brito" } },
+
+
+// Condomínios fora do estado do Ceará
+
+            { nome: 'AROEIRA', lat: "-23.58732", lon: "-46.63271", end: { rua: 'Doutor Neto de Araujo', num: '238', bairro: "Vila Mariana", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'AMALFI', lat: "-23.53015", lon: "-46.71914", end: { rua: 'Princesa Leopoldina', num: '595', bairro: "Alto da Lapa", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'BARÃO DA FONTE', lat: "-8.0415", lon: "-34.89499", end: { rua: 'Rua da Angustura', num: '328', bairro: "Aflitos", cidade: "Recife", sigla: "PE" } },
+            { nome: 'BARÃO DE MAUÁ', lat: "-22.89806", lon: "-43.28984", end: { rua: 'Paulo Silva Araújo', num: '221', bairro: "Méler", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'BANDEIRANTE JOÃO DO PRADO', lat: "-22.9745", lon: "-43.1932", end: { rua: 'Pompeu Loureiro', num: '94', bairro: "Copacabana", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'BARRA ZEN', lat: "-23.00534", lon: "-43.44252", end: { rua: 'Doze', num: '50', bairro: "Recreio dos Bandeirantes", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'BEACH WAY', lat: "-10.50503", lon: "-39.0149", end: { rua: 'Euclides da Cunha', num: 'S/N', bairro: "LOT Luiziana QD-J", cidade: "Tamandaré", sigla: "PE" } },
+            { nome: 'CHAMPS ELYSEES', lat: "-22.92801", lon: "-43.23161", end: { rua: 'Barão de Pirassinunga', num: '33', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'CIDADE DE MONACO', lat: "-8.02963", lon: "-34.91601", end: { rua: 'Conselheiro Nabuco', num: '246', bairro: "Casa Amarela", cidade: "Recife", sigla: "PE" } },
+            { nome: 'CASA DOS FLAMBOYANTS', lat: "-22.92772", lon: "-43.22772", end: { rua: 'Rua dos Araujos', num: '105', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'CIUDAD SEVILHA', lat: "-8.02851", lon: "-34.90865", end: { rua: 'Abel de Sá Bezerra Cavalcanti', num: '74', bairro: "Casa Amarela", cidade: "Recife", sigla: "PE" } },
+            { nome: 'COSTA AZUL', lat: "-23.63247", lon: "-46.63978", end: { rua: 'Itatiaia', num: '307', bairro: "Vila Guarani (Zona Sul)", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'DISEGNO CASAS BOUTIQUE', lat: "-23.01034", lon: "-43.42471", end: { rua: 'Ministro Lafayette Andrada', num: '710', bairro: "Barra da Tijuca", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'CONDE DO PARQUE', lat: "-22.96128", lon: "-43.21797", end: { rua: 'Benjamin Batista', num: '197', bairro: "Jardim Botânico", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'DANIELLE MORAIS', lat: "-8.19791", lon: "-34.91882", end: { rua: 'Oscar Pereira', num: '37', bairro: "Candeias", cidade: "João dos Guararapes", sigla: "PE" } },
+            { nome: 'DOMÍNIO LOCKTEC', lat: "-23.61039", lon: "-46.63921", end: { rua: 'Pitangueiras', num: '167', bairro: "Vila Saúde", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'DUQUE DANJOU', lat: "-22.98368", lon: "-43.19721", end: { rua: 'Barão da Torre', num: '15', bairro: "Ipanema", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'ESPAÇOS DOS MANACÁS', lat: "-23.52637", lon: "-46.7068", end: { rua: 'João Anes', num: '144', bairro: "Alto da Lapa", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'EDEN', lat: "-23.6353", lon: "-46.6433", end: { rua: 'Carnaubeiras', num: '122', bairro: "Jabaquara", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'FAROL DO PORTO', lat: "-8.14013", lon: "-34.90992", end: { rua: 'Almirante Batista Leão', num: '76', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE" } },
+            { nome: 'GEOMAR', lat: "-22.97325", lon: "-43.19111", end: { rua: 'Barata Ribeiro', num: '662', bairro: "Copacabana", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'GAN EDEN', lat: "-22.92717", lon: "-43.25393", end: { rua: 'Paula Brito', num: '350', bairro: "Andarí", cidade: "RJ", sigla: "Rio de Janeiro" } },
+            { nome: 'GUARATUBA', lat: "-23.63353", lon: "-46.64242", end: { rua: 'Guaratuba', num: '280', bairro: "Vila Guarani (Zona Sul)", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'GUADALUPE', lat: "-8.19733", lon: "-34.9208", end: { rua: 'Comendador Sá Barreto', num: '365', bairro: "Candeias", cidade: "Jaboatão dos Guararapes", sigla: "PE" } },
+            { nome: 'FREGUESIA TOWER', lat: "-22.9441", lon: "-43.33552", end: { rua: 'Comandante Rúbens Silva', num: '1000', bairro: "Freguesia (Jacarepaguá)", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'GUARARAPES', lat: "-8.08536", lon: "-34.98672", end: { rua: 'Mosstarda', num: '3133', bairro: "Curado", cidade: "Jaboatão dos Guararapes", sigla: "PE" } },
+            { nome: 'HIGH POINT', lat: "-23.62725", lon: "-46.72401", end: { rua: 'Deputado Laércio Corte', num: '753', bairro: "Paraíso do Morumbi", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'IEMANJA', lat: "-8.05542", lon: "-34.87747", end: { rua: 'Rua da Aurora', num: '1019', bairro: "Santo Amaro", cidade: "Recife", sigla: "PE" } },
+            { nome: 'ILHA DE CAPRI', lat: "-23.64932", lon: "-46.6349", end: { rua: 'Francisco Duarte Graça', num: '83', bairro: "Cidade Vargas", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'ILHA DE KÓS', lat: "-22.93524", lon: "-43.24336", end: { rua: 'Conde de Bonfim', num: '807', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'INOCÊNCIO RODRIGUES', lat: "-8.0294", lon: "-34.90831", end: { rua: 'Estrada do Arraial', num: '2885', bairro: "Parnamirim", cidade: "Recife", sigla: "PE" } },
+            { nome: 'LOGOS', lat: "-23.57252", lon: "-46.62561", end: { rua: 'Rua Paulo Orozimbo', num: '584', bairro: "Cambicu", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'ITAPUAMA', lat: "-7.99757", lon: "-34.8401", end: { rua: 'Francisco Ambrósio de Barros Leite', num: '152', bairro: "Bairro Novo", cidade: "Olinda", sigla: "PE" } },
+            { nome: 'KENSINGTON', lat: "-23.56379", lon: "-46.68096", end: { rua: 'Cônego Eugênio leite', num: '613', bairro: "Pinheiros", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'IMPERIAL LARANJEIRAS', lat: "-22.93312", lon: "-43.18553", end: { rua: 'Rua das Laranjeiras', num: '192', bairro: "Laranjeiras", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'KING DAVID', lat: "-23.649", lon: "-46.64426", end: { rua: 'Rua das Grumixamas', num: '399', bairro: "Vila Parque Jabaquara", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'MADONNA DELLE GRAZIE', lat: "-22.88867", lon: "-42.99662", end: { rua: 'Estrada da Paciênia', num: '8069', bairro: "Maria Paula", cidade: "São Gonçalo", sigla: "RJ" } },
+            { nome: 'MAKAMBIRA', lat: "-8.48577", lon: "-35.00126", end: { rua: 'Avenida para Praia', num: 'S/N', bairro: "LOT Merepe - V", cidade: "Ipojuca", sigla: "PE" } },
+            { nome: 'MANOEL VILAÇA', lat: "-8.04207", lon: "-34.94496", end: { rua: 'Odon Rodrigues de Morais Rego', num: '78', bairro: "Vázea", cidade: "Recife", sigla: "PE" } },
+            { nome: 'MAQUINÉ', lat: "-22.9325", lon: "-43.24492", end: { rua: 'João Alfredo', num: '25', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'MILENIUM', lat: "-22.93828", lon: "-43.33697", end: { rua: 'Comandante Rúbens Silva', num: '323', bairro: "Freguesia (Jacarepaguá)", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'MONACO', lat: "-8.13445", lon: "-34.90438", end: { rua: 'Antônio Passos', num: '51', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE" } },
+            { nome: 'MORADA DA FONTE', lat: "-8.04181", lon: "-34.89696", end: { rua: 'Rua da Angustura', num: '104', bairro: "Aflitos", cidade: "Recife", sigla: "PE" } },
+            { nome: 'NIXXUS I', lat: "-8.50527", lon: "-35.00202", end: { rua: 'Cajueiro', num: '512', bairro: "Porto de Galinhas", cidade: "Ipojuca", sigla: "PE" } },
+            { nome: 'OJC', lat: "-23.56727", lon: "-46.64321", end: { rua: 'Martiniano de Carvalho', num: '960', bairro: "Bela Vista", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'MARSELLE', lat: "-22.94215", lon: "-43.19284", end: { rua: 'Belisário Távora', num: '231', bairro: "Laranjeiras", cidade: "Rio de janeiro", sigla: "RJ" } },
+            { nome: 'OSVALDO CORDEIRO DE FARIA', lat: "-8.08365", lon: "-34.93909", end: { rua: 'Avenida São Paulo', num: '305', bairro: "Jardim São Paulo", cidade: "Recife", sigla: "PE" } },
+            { nome: 'PAÇO DE SORRENTO', lat: "-23.57246", lon: "-46.63377", end: { rua: 'Castro Alves', num: '908', bairro: "Aclimação", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'PIERRE RAMOS', lat: "-7.99502", lon: "-34.84086", end: { rua: 'Doutor Manoel de Almeida Belo', num: '1241', bairro: "Bairro Novo", cidade: "Olinda PE", sigla: "undefined" } },
+            { nome: 'POLLUX I', lat: "-23.50863", lon: "-46.66555", end: { rua: 'Praça Delegado Amoroso Neto', num: '120', bairro: "Casa Verde", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'PRAÇA DAS AVENÇAS', lat: "-8.05209", lon: "-34.94108", end: { rua: 'Antônio Curado', num: '307', bairro: "Engenho do Meio", cidade: "Recife", sigla: "PE" } },
+            { nome: 'PRAÇA DOS FICUS', lat: "-8.05492", lon: "-34.91379", end: { rua: 'Avenida Caxangá', num: '521', bairro: "Madalena", cidade: "Recife", sigla: "PE" } },
+            { nome: 'PRAÇA DAS FIGUEIRAS', lat: "-8.05131", lon: "-34.90766", end: { rua: 'Pessoa de Melo', num: '227', bairro: "Madalena", cidade: "Recife", sigla: "PE" } },
+            { nome: 'REGINA', lat: "-22.91446", lon: "-43.23152", end: { rua: 'Isidro de Figueredo', num: '31', bairro: "Maracanã", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'REQUINTE DO RIO', lat: "-22.91936", lon: "-43.22433", end: { rua: 'Pereira de Siqueira', num: '15', bairro: "Tijuda", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'PRAIA LEME', lat: "-22.96171", lon: "-43.16504", end: { rua: 'Praça Almirante Júlio de Noronha', num: 'S/N', bairro: "Leme", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'RESIDENCIAL BARÃO', lat: "-23.5326", lon: "-46.6491", end: { rua: 'Alameda Barão de Limeira', num: '1052', bairro: "Campos Elíseos", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'RIO VERDE', lat: "-23.52636", lon: "-46.70524", end: { rua: 'Luís Martins', num: '5', bairro: "Alto da Lapa", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'RITA OLYNTHO MACHADO', lat: "-22.98615", lon: "-43.19563", end: { rua: 'Avenida Rainha Elizabeth da Bélgica', num: '664', bairro: "Ipanema", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'SAINT TROPEZ', lat: "-22.90486", lon: "-43.11392", end: { rua: 'travessa Coelho Gomes', num: '10', bairro: "Icaraí", cidade: "Niterói", sigla: "RJ" } },
+            { nome: 'SÃO DOMINGOS', lat: "-22.90049", lon: "-43.12792", end: { rua: 'General Andrade Neves', num: '317', bairro: "São Domingos", cidade: "Niterói", sigla: "RJ" } },
+            { nome: 'SÃO CAETANO', lat: "-8.11306", lon: "-35.29239", end: { rua: 'Cândido Cardoso Fontes', num: '87', bairro: "Matriz", cidade: "Vitória de Santo Antão", sigla: "PE" } },
+            { nome: 'SPLENDOR TABOÃO', lat: "-23.60427", lon: "-46.75928", end: { rua: 'Rua das Magnólias', num: '17', bairro: "parque Assunção", cidade: "Taboão da Serra", sigla: "SP" } },
+            { nome: 'SÃO JUDAS PARK', lat: "-23.61081", lon: "-46.64836", end: { rua: 'Ararapira', num: '320', bairro: "Planalto Paulista", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'STUDIO ONE CLASSIC', lat: "-8.14372", lon: "-34.90907", end: { rua: 'Sá e Souza', num: '1205', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE" } },
+            { nome: 'SIBIPIRUNAS', lat: "-22.94333", lon: "-43.03432", end: { rua: 'Sibipirunas', num: '138', bairro: "Maravista", cidade: "Niterói", sigla: "RJ" } },
+            { nome: 'SUNNY SIDE', lat: "-22.46494", lon: "-43.1591", end: { rua: 'Estrada do Carangola', num: '1953', bairro: "Carangola", cidade: "Petrópolis", sigla: "RJ" } },
+            { nome: 'SÓRIA', lat: "-8.13138", lon: "-34.90224", end: { rua: 'Avenida Engenheiro Domingos Ferreira', num: '5027', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE" } },
+            { nome: 'TIMONEIRO', lat: "-8.13692", lon: "-34.90273", end: { rua: 'Setúbal', num: '682', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE" } },
+            { nome: 'TAIO', lat: "-8.05743", lon: "-34.93016", end: { rua: 'Taió', num: '201', bairro: "Cordeiro", cidade: "Recife", sigla: "PE" } },
+            { nome: 'TOUR DEL PANE', lat: "-22.90812", lon: "-43.13072", end: { rua: 'Vera Crispino de Freitas', num: '48', bairro: "Boa Viagem", cidade: "Niterói", sigla: "RJ" } },
+            { nome: 'TRAVESSA BOLÍVIA', lat: "-22.8939", lon: "-43.0351", end: { rua: 'Travessa Bolívia', num: '31', bairro: "Vila Progresso", cidade: "Niterói", sigla: "RJ" } },
+            { nome: 'TUMIARÚ', lat: "-23.58554", lon: "-46.63503", end: { rua: 'Dona Inácia Uchôa', num: '52', bairro: "Vila Mariana", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'VERA CRUZ', lat: "-22.97315", lon: "-43.19108", end: { rua: 'Barata Ribeiro', num: '658', bairro: "Copacabana", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'VALPARAÍSO', lat: "-22.52024", lon: "-43.19461", end: { rua: 'Avenida Portugal', num: '415', bairro: "Valparaíso", cidade: "Petrópolis", sigla: "RJ" } },
+            { nome: 'VIAREGGIO', lat: "-23.6288", lon: "-46.63533", end: { rua: 'Rua dos Democratas', num: '721', bairro: "Vila Monte Alegre", cidade: "São Paulo", sigla: "SP" } },
+            { nome: 'VILA DO CONDE', lat: "-8.08633", lon: "-34.9571", end: { rua: 'João Ferreira', num: '70', bairro: "Sancho", cidade: "Recife", sigla: "PE" } },
+            { nome: 'VILLAGE DAS PEDRAS', lat: "-22.93107", lon: "-42.89764", end: { rua: 'Doutor Creso Ribeiro', num: 'S/N', bairro: "São José do Imbassaí", cidade: "Maricá", sigla: "RJ" } },
+            { nome: 'VIRGINIA', lat: "-8.12017", lon: "-34.89838", end: { rua: 'Avenida Engenheiro Domingos Ferreira', num: '3652', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE" } },
+            { nome: 'VIVENDAS DO MARACANÃ', lat: "-22.91485", lon: "-43.23143", end: { rua: 'Isidro de Figueiredo', num: '26', bairro: "Maracanã", cidade: "Rio de Janeiro", sigla: "RJ" } },
+            { nome: 'VILLA DI NAPOLE', lat: "-22.92388", lon: "-43.3582", end: { rua: 'Alexandre Ramos', num: '535', bairro: "Pechincha", cidade: "Rio de Janeiro", sigla: "RJ" } },
+
         ]
 
 
@@ -466,7 +554,7 @@
                 )
 
                 marker.on('click', function () {
-                    onClickMarker({ local: obj, marker: marker , index: index})
+                    onClickMarker({ local: obj, marker: marker, index: index })
                 })
 
                 var nomeSimple = (obj.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, '')).toLowerCase()
@@ -478,11 +566,11 @@
                     }
                 )
             });
-	try{
-		console.log(`Existe ${arrayMarker.length} condomínios`)
-	}catch (err){
+            try {
+                console.log(`Existe ${arrayMarker.length} condomínios`)
+            } catch (err) {
 
-	}
+            }
 
         }
 
@@ -530,7 +618,7 @@
                         } else if (controleSidePanel.on) {
                             addConteudoSidePanel('local', items)
                             resetInpBusca()
-		abrirItem(items)
+                            abrirItem(items)
                         }
                     })
 
@@ -730,9 +818,9 @@ ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
 
         }
 
-	function abrirItemLatLon(lat,lon){
-		map.setView({lat,lon}, 16)
-	}
+        function abrirItemLatLon(lat, lon) {
+            map.setView({ lat, lon }, 16)
+        }
 
         function baixarJsonLocais() {
             const jsonString = JSON.stringify(locais, null, 2);
