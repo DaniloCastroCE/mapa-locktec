@@ -1,6 +1,6 @@
 ﻿<!--
     Modificado: 23/09/2024
-    Criado no dia 08/09/2024 
+    Criado no dia 12/10/2024 
     por Danilo Castro CE
 -->
 
@@ -449,12 +449,12 @@
             removeMarkerAll(arrayMarker)
             arrayMarker = []
 
-            array.forEach(obj => {
+            array.forEach((obj, index) => {
                 var marker = L.marker([obj.lat, obj.lon], { title: obj.nome }).addTo(map)
                 marker.bindPopup(`
-            <b>${obj.nome}</b><br>
-            ${obj.end.rua}, ${obj.end.num}, ${obj.end.bairro}
-        `)
+                    <b>${obj.nome}</b><br>
+                    ${obj.end.rua}, ${obj.end.num}, ${obj.end.bairro}
+                `)
 
                 marker.bindTooltip(
                     `${obj.nome[0].toUpperCase()}${obj.nome.substr(1).toLowerCase()}`,
@@ -466,7 +466,7 @@
                 )
 
                 marker.on('click', function () {
-                    onClickMarker({ local: obj, marker: marker })
+                    onClickMarker({ local: obj, marker: marker , index: index})
                 })
 
                 var nomeSimple = (obj.nome.normalize('NFD').replace(/[\u0300-\u036f]/g, '')).toLowerCase()
@@ -666,16 +666,22 @@
 
                     if (!chkArray) {
                         var txt = `
-                    <p style="margin-top:10px;">
+                    <p style="margin-top:10px; cursor:pointer;">
                         *<b>${obj.local.nome}</b>*<br>
                             ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
                     </p>
                     `
                         conteudoSidePanel.innerHTML += txt
                         controleSidePanel.arrayMarkerAdd.push(obj.marker)
+                        try {
+                            let textoParaCopiar = `*${obj.local.nome}*
+${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
+`
+                            navigator.clipboard.writeText(textoParaCopiar)
+                        } catch (error) {
+                            console.log(error)
+                        }
                     }
-
-
                     break
                 default:
                     break;
