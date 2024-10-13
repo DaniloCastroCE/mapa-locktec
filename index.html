@@ -786,8 +786,7 @@ ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
         }
 
         function clickCopy(obj) {
-            let text = obj.childNodes[5].textContent
-            navigator.clipboard.writeText(text)
+            navigator.clipboard.writeText(obj.childNodes[5].textContent)
         }
 
         function hiddenFerramentas() {
