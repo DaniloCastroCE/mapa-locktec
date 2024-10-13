@@ -173,12 +173,13 @@
             margin-top: 10px;
         }
 
-        #idCopy {
-            margin-top:10px; 
-            cursor:pointer;
+        .idCopy {
+            margin-top: 10px;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        #idCopy:active {
+
+        .idCopy:active {
             background-color: rgb(167, 199, 231);
         }
 
@@ -292,20 +293,20 @@
 
         var locais = [
 
-// Condomínios do estado do Ceará
+            // Condomínios do estado do Ceará
             { nome: "LOCKTEC", lat: "-3.73030", lon: "-38.48041", end: { rua: 'Oliveira Viana', num: '77', bairro: "Vicente Pinzon", cidade: "Fortaleza", sigla: "CE" } },
-            { nome: "ÁGUA FRIA", lat: "-3.77448", lon: "-38.45892", end: { rua: "Cidade Ecológica", num: "80", bairro: "Edson Queiroz", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ALBERTO VIANA", lat: "-3.72639", lon: "-38.50235", end: { rua: "Silvia Jatahy", num: "160", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ANGRA", lat: "-3.72425", lon: "-38.48632", end: { rua: "Senador Machado", num: "185", bairro: "Mucuripe", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ANTÚRIOS", lat: "-3.742", lon: "-38.50338", end: { rua: "Joaquim Nabuco", num: "1889", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ARTHUR BERNARDES", lat: "-3.80975", lon: "-38.47024", end: { rua: "Avenida Presidente Arthur Bernardes", num: "2757", bairro: "José de Alencar", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ÁSIA IMPERIAL", lat: "-3.80825", lon: "-38.47116", end: { rua: "Rafael Tobias", num: "2185", bairro: "José de Alencar", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ASPEN", lat: "-3.74242", lon: "-38.49181", end: { rua: "Travessa Monsehor Catão", num: "1200", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ATALAIA", lat: "-3.72812", lon: "-38.49893", end: { rua: "Ana Bilhar", num: "123", bairro: "Meireles", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ATHALANTA", lat: "-3.72947", lon: "-38.49408", end: { rua: "Leonardo Mota", num: "340", bairro: "Meireles", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "ATALANTA", lat: "-3.81526", lon: "-38.46841", end: { rua: "Avenida Odilon Guimarães", num: "3740", bairro: "Curió", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "AVALLON HILL", lat: "-3.74853", lon: "-38.52672", end: { rua: "Monsenhor Otávio de Castro", num: "677", bairro: "Fátima", cidade: "Fortaleza", sigla: "CE"  } },
-            { nome: "BARÃO DE ARACATI", lat: "-3.732836596779856", lon: "-38.511850547193426", end: { rua: "Barão de Aracati", num: "1291", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE"} },
+            { nome: "ÁGUA FRIA", lat: "-3.77448", lon: "-38.45892", end: { rua: "Cidade Ecológica", num: "80", bairro: "Edson Queiroz", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ALBERTO VIANA", lat: "-3.72639", lon: "-38.50235", end: { rua: "Silvia Jatahy", num: "160", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ANGRA", lat: "-3.72425", lon: "-38.48632", end: { rua: "Senador Machado", num: "185", bairro: "Mucuripe", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ANTÚRIOS", lat: "-3.742", lon: "-38.50338", end: { rua: "Joaquim Nabuco", num: "1889", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ARTHUR BERNARDES", lat: "-3.80975", lon: "-38.47024", end: { rua: "Avenida Presidente Arthur Bernardes", num: "2757", bairro: "José de Alencar", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ÁSIA IMPERIAL", lat: "-3.80825", lon: "-38.47116", end: { rua: "Rafael Tobias", num: "2185", bairro: "José de Alencar", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ASPEN", lat: "-3.74242", lon: "-38.49181", end: { rua: "Travessa Monsehor Catão", num: "1200", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ATALAIA", lat: "-3.72812", lon: "-38.49893", end: { rua: "Ana Bilhar", num: "123", bairro: "Meireles", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ATHALANTA", lat: "-3.72947", lon: "-38.49408", end: { rua: "Leonardo Mota", num: "340", bairro: "Meireles", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "ATALANTA", lat: "-3.81526", lon: "-38.46841", end: { rua: "Avenida Odilon Guimarães", num: "3740", bairro: "Curió", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "AVALLON HILL", lat: "-3.74853", lon: "-38.52672", end: { rua: "Monsenhor Otávio de Castro", num: "677", bairro: "Fátima", cidade: "Fortaleza", sigla: "CE" } },
+            { nome: "BARÃO DE ARACATI", lat: "-3.732836596779856", lon: "-38.511850547193426", end: { rua: "Barão de Aracati", num: "1291", bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE" } },
             { nome: "BARCELONA", lat: "-3.73297", lon: "-38.51442", end: { rua: "Antônio Augusto", num: "1450", bairro: "Meireles", cidade: "Fortaleza", sigla: "CE" } },
             { nome: "BARRAMAR E BARRASOL", lat: "-3.73236", lon: "-38.47993", end: { rua: "Engenheiro Santana Junior", num: "333", bairro: "Vicente Pinzon", cidade: "Fortaleza", sigla: "CE" } },
             { nome: "BELIZE", lat: "-3.7612067962012357", lon: "-38.49033457663506", end: { rua: "Rua Professor Jacinto Botelho", num: "425", bairro: "Edson Queiroz", cidade: "Fortaleza", sigla: "CE" } },
@@ -453,7 +454,7 @@
             { nome: "VIRGEM DE FÁTIMA", lat: "-3.73411", lon: "-38.54274", end: { rua: "Bela Cruz", num: "2200", bairro: "Farias Brito", cidade: "Fortaleza", sigla: "CE" } },
 
 
-// Condomínios fora do estado do Ceará
+            // Condomínios fora do estado do Ceará
 
             { nome: 'AROEIRA', lat: "-23.58732", lon: "-46.63271", end: { rua: 'Doutor Neto de Araujo', num: '238', bairro: "Vila Mariana", cidade: "São Paulo", sigla: "SP" } },
             { nome: 'AMALFI', lat: "-23.53015", lon: "-46.71914", end: { rua: 'Princesa Leopoldina', num: '595', bairro: "Alto da Lapa", cidade: "São Paulo", sigla: "SP" } },
@@ -736,7 +737,7 @@
                 <div style="margin-top:40px; text-align:center;">
                     <a href="http://www.google.com.br/search?q=
                             ${encodeURIComponent(
-                                `${obj.local.end.rua}, ${obj.local.end.num}, ${obj.local.end.bairro}, ${obj.local.end.cidade} - ${obj.local.end.sigla}`)}" target = "_blank">
+                        `${obj.local.end.rua}, ${obj.local.end.num}, ${obj.local.end.bairro}, ${obj.local.end.cidade} - ${obj.local.end.sigla}`)}" target = "_blank">
                             Pesquisar no Google
                     </a>
                 </div>
@@ -763,27 +764,30 @@
                     });
 
                     if (!chkArray) {
-                        var txt = `
-                    <p id="idCopy">
+                        let textoParaCopiar = `*${obj.local.nome}*
+${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
+`
+
+                        let txt = `
+                    <p class="idCopy" onclick="clickCopy(this)">
                         *<b>${obj.local.nome}</b>*<br>
                             ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro} (${obj.local.end.cidade}) 
+                            <span style="display:none;" >${textoParaCopiar}</span>
                     </p>
                     `
                         conteudoSidePanel.innerHTML += txt
                         controleSidePanel.arrayMarkerAdd.push(obj.marker)
-                        try {
-                            let textoParaCopiar = `*${obj.local.nome}*
-${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
-`
-                            navigator.clipboard.writeText(textoParaCopiar)
-                        } catch (error) {
-                            console.log(error)
-                        }
+                        navigator.clipboard.writeText(textoParaCopiar)
                     }
                     break
                 default:
                     break;
             }
+        }
+
+        function clickCopy(obj) {
+            let text = obj.childNodes[5].textContent
+            navigator.clipboard.writeText(text)
         }
 
         function hiddenFerramentas() {
