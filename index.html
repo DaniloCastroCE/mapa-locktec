@@ -19,6 +19,7 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        
     <style rel="stylesheet" type="text/css">
         * {
             padding: 0;
@@ -41,7 +42,7 @@
 
         #logo-box {
             position: absolute;
-            z-index: 9999;
+            z-index: 998;
             right: 2px;
             top: 2px;
 
@@ -200,7 +201,10 @@
 
 <body>
     <div id="logo-box">
-        <img src="./logo-locktec.png" alt="Logo">
+        <img id='logo-lck' 
+            src="./logo-locktec.png" 
+            alt="Logo" 
+            onerror="this.onerror=null; this.src='https://locktec.com.br/wp-content/uploads/2023/12/cropped-logo-locktec.png';">
     </div>
 
     <div class="boxBtnInp">
@@ -279,8 +283,6 @@
                 reader.readAsText(file, 'UTF-8')
             }
         })
-
-
 
         /*
         const toggleButton = document.getElementById('toggle');
