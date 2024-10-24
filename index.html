@@ -1,6 +1,6 @@
 ﻿<!--
     Modificado: 24/10/2024
-    Nota da Atualização: Mudando a URL da lat e lon quando pesquisado
+    Nota da Atualização: Mudando as URLs quando é pesquisado no google
     Criado no dia 12/10/2024 
     por Danilo Castro CE
 -->
@@ -741,9 +741,8 @@
                 </p>
 
                 <div style="margin-top:40px; text-align:center;">
-                    <a href="http://www.google.com.br/search?q=
-                            ${encodeURIComponent(
-                        `${obj.local.end.rua}, ${obj.local.end.num}, ${obj.local.end.bairro}, ${obj.local.end.cidade} - ${obj.local.end.sigla}`)}" target = "_blank">
+                    <a href="http://www.google.com.br/search?q=${encodeURIComponent(
+                        `${obj.local.nome}, ${obj.local.end.rua}, ${obj.local.end.num}, ${obj.local.end.bairro}, ${obj.local.end.cidade} - ${obj.local.end.sigla}`)}" target = "_blank">
                             Pesquisar no Google
                     </a>
                 </div>
