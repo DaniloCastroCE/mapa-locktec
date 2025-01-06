@@ -788,7 +788,7 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
                     <p class="idCopy" onclick="clickCopy(this)">
                         *<b>${obj.local.nome}</b>*<br>
                             ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro} (${obj.local.end.cidade}) 
-                            <span style="display:none;" >${textoParaCopiar}</span>
+                            <span class="spanCopyTextos" style="display:none;" >${textoParaCopiar}</span>
                     </p>
                     `
                         conteudoSidePanel.innerHTML += txt
@@ -874,5 +874,4 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
         addMarkerAll(locais)
     </script>
 </body>
-
 </html>
