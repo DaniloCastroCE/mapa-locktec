@@ -766,6 +766,7 @@
                 <h2 style='text-align:center;'><b> EXIBIR </b></h2>
                     <button onclick="hiddenFerramentas()" type="button">Selecionados</button> 
                     <button onclick="mostrarFerramentas()" type="button">Todos</button>
+                    <button onclick="" type="button">Copiar Todos</button>
                       <br>`
                     break
 
@@ -794,20 +795,30 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
                         conteudoSidePanel.innerHTML += txt
                         controleSidePanel.arrayMarkerAdd.push(obj.marker)
                         navigator.clipboard.writeText(textoParaCopiar)
-                        try {
-                            const spans = document.querySelectorAll('.spanCopyTextos')
-    
-                            spans.forEach(el => {
-                                console.log(el.textContent)
-                            })
-                            
-                        } catch (error) {
-                            console.error('Erro: ',error)
-                        }
+                        
                     }
                     break
                 default:
                     break;
+            }
+        }
+
+        function copiarALL () {
+            try {
+                const spans = document.querySelectorAll('.spanCopyTextos')
+                if(spans && spans.length > 0){
+                    let texto
+                    spans.forEach(el => {
+                        texto += `${el.textContent}
+                        ` 
+                    })
+                    navigator.clipboard.writeText(texto)
+                }else {
+                    alert("Não existe condomínio selecionados para copiar")
+                }              
+                            
+            } catch (error) {
+                console.error('Erro: ',error)
             }
         }
 
