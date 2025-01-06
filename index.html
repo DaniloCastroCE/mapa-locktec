@@ -809,8 +809,9 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
                 let texto
                 if(spans && spans.length > 0){
                     spans.forEach((el, index) => {
-                        texto += `${el.textContent}
-                        ` 
+                        if(el !== undefined){
+                            texto += `${el.textContent}` 
+                        }
                     })
                     navigator.clipboard.writeText(texto)
                 }else {
