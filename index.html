@@ -794,6 +794,16 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
                         conteudoSidePanel.innerHTML += txt
                         controleSidePanel.arrayMarkerAdd.push(obj.marker)
                         navigator.clipboard.writeText(textoParaCopiar)
+                        try {
+                            const spans = document.querySelectorAll('.spanCopyTextos')
+    
+                            spans.forEach(el => {
+                                console.log(el)
+                            })
+                            
+                        } catch (error) {
+                            console.error('Erro: ',error)
+                        }
                     }
                     break
                 default:
