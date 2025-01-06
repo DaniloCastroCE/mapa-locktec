@@ -806,9 +806,9 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
         function copiarALL () {
             try {
                 const spans = document.querySelectorAll('.spanCopyTextos')
+                let texto
                 if(spans && spans.length > 0){
-                    let texto
-                    spans.forEach(el => {
+                    spans.forEach((el, index) => {
                         texto += `${el.textContent}
                         ` 
                     })
