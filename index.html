@@ -867,6 +867,8 @@ Endereço: ${obj.local.end.rua}, ${obj.local.end.num} - ${obj.local.end.bairro}
                     el.addTo(map)
                 });
                 resetInpBusca()
+            }else {
+                console.log(`Não há condomínios selecionados para destaque.`)
             }
         }
 
