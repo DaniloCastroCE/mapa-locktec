@@ -175,7 +175,9 @@
         #conteudoSidePanel {
             margin-top: 10px;
         }
-
+        .btnTools {
+            margin-right: 5px;
+        }
         .idCopy {
             margin-top: 10px;
             cursor: pointer;
@@ -764,9 +766,9 @@
                 case 'tools':
                     conteudoSidePanel.innerHTML = `
                 <h2 style='text-align:center;'><b> EXIBIR </b></h2>
-                    <button onclick="hiddenFerramentas()" type="button">Selecionados</button> 
-                    <button onclick="mostrarFerramentas()" type="button">Todos</button>
-                    <button onclick="copiarALL()" type="button">Copiar os Selecionados</button>
+                    <button class="btnTools" onclick="hiddenFerramentas()" type="button">Selecionados</button> 
+                    <button class="btnTools" onclick="mostrarFerramentas()" type="button">Todos</button>
+                    <button class="btnTools" onclick="copiarALL()" type="button">Copiar os Selecionados</button>
                       <br>`
                     break
 
