@@ -27,6 +27,10 @@ class Local {
                 end: { rua: 'Silvia Jatahy', num: '160', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", }
             },
             {
+                nome: "ANA JATAHY", lat: "-3.752302", lon: "-38.503652", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
+                end: { rua: 'Avenida Desembargador Moreira', num: '2920', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", }
+            },            
+            {
                 nome: "ANGRA", lat: "-3.724250", lon: "-38.486320", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
                 end: { rua: 'Senador Machado', num: '185', bairro: "Mucuripe", cidade: "Fortaleza", sigla: "CE", }
             },
