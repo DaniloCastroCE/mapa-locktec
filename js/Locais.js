@@ -334,8 +334,12 @@ class Local {
             },
             {
                 nome: "LUIZ VIDAL", lat: "-3.727660", lon: "-38.511380", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
-                end: { rua: 'Idelfonso Albano', num: '777', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", }
+                end: { rua: 'Idelfonso Albano', num: '777', bairro: "Meireles", cidade: "Eusébio ", sigla: "CE", }
             },
+            {
+                nome: "MAGNA ACACIA", lat: "-3.872430", lon: "-38.467671", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
+                end: { rua: 'Coronel Lencarte Lopes', num: '10', bairro: "Tamatanduba", cidade: "Fortaleza", sigla: "CE", }
+            },            
             {
                 nome: "MANSÃO BARCELONA", lat: "-3.731480", lon: "-38.478920", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
                 end: { rua: 'Professor Heráclito', num: '313', bairro: "Vicente Pinzon", cidade: "Fortaleza", sigla: "CE", }
