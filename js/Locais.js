@@ -417,7 +417,7 @@ class Local {
                 end: { rua: 'Afonso Celso', num: '225', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", }
             },
             {
-                nome: "MORADA VILA GOES", lat: "-3.736172", lon: "-38.568684", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
+                nome: "MORADA VILA GOES", lat: "-3.736172", lon: "-38.568684", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",
                 end: { rua: 'Avenida Bezerra de Menezes', num: '2690', bairro: "Presidente Kennedy", cidade: "Fortaleza", sigla: "CE", }
             },
             {
@@ -763,7 +763,7 @@ class Local {
                 end: { rua: 'Barão de Pirassinunga', num: '33', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ", }
             },
             {
-                nome: "CHATEAU BLANC", lat: "-22.965923", lon: "-43.200099", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",
+                nome: "CHATEAU BLANC", lat: "-22.965923", lon: "-43.200099", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",
                 end: { rua: 'Sacopã', num: '792', bairro: "Lagoa", cidade: "Rio de Janeiro", sigla: "RJ", }
             },
             {
@@ -787,7 +787,7 @@ class Local {
                 end: { rua: 'Itatiaia', num: '307', bairro: "Vila Guarani (Zona Sul)", cidade: "São Paulo", sigla: "SP", }
             },
             {
-                nome: "CORTINA D'AMPEZZO", lat: "-22.900338", lon: "-43.286402", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",
+                nome: "CORTINA D'AMPEZZO", lat: "-22.900338", lon: "-43.286402", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",
                 end: { rua: 'Santos Titara', num: '138', bairro: "Todos os Santos", cidade: "Rio de Janeiro", sigla: "RJ", }
             },
             {
@@ -911,7 +911,7 @@ class Local {
                 end: { rua: 'Antônio Passos', num: '51', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE", }
             },
             {
-                nome: "MONT BLANC", lat: "-22.982935", lon: "-43.201595", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",
+                nome: "MONT BLANC", lat: "-22.982935", lon: "-43.201595", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",
                 end: { rua: 'Barão da Torre', num: '192', bairro: "Ipanema", cidade: "Rio de Janeiro", sigla: "RJ", }
             },
             {
@@ -923,7 +923,7 @@ class Local {
                 end: { rua: 'Cajueiro', num: '512', bairro: "Porto de Galinhas", cidade: "Ipojuca", sigla: "PE", }
             },
             {
-                nome: "NOVELLETO", lat: "-23.526110", lon: "-46.705129", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "SÃO PAULO",
+                nome: "NOVELLETO", lat: "-23.526110", lon: "-46.705129", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "SÃO PAULO",
                 end: { rua: 'Antônio de Mariz', num: '10', bairro: "Alto da Lapa", cidade: "São Paulo", sigla: "SP", }
             },
             {
