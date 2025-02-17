@@ -115,14 +115,6 @@ class Local {
             end: { rua: 'Rua das Carnaúbas', num: '560', bairro: "Passaré", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "BROOKSVILLE", nomeSimplificado: "brooksville", lat: "-3.741110", lon: "-38.492420", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
-            end: { rua: 'Coronel Jucá', num: '1000', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
-            },
-            { 
-            nome: "BUCKINGAHN", nomeSimplificado: "buckingahn", lat: "-3.726080", lon: "-38.501640", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
-            end: { rua: 'José VIlar', num: '180', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
-            },
-            { 
             nome: "CARMEL ATLANTICO", nomeSimplificado: "carmel atlantico", lat: "-3.746930", lon: "-38.456650", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Trajano de Medeiros', num: '3233', bairro: "Praia do Futuro I", cidade: "Fortaleza", sigla: "CE", } 
             },
@@ -167,11 +159,27 @@ class Local {
             end: { rua: '26° Batalhão', num: '291', bairro: "Mondubim", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "EDIFICIO ARAÇANGA", nomeSimplificado: "edificio aracanga", lat: "-3.761224", lon: "-38.509354", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "EDIFÍCIO ARAÇANGA", nomeSimplificado: "edificio aracanga", lat: "-3.761224", lon: "-38.509354", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Evaristo Reis', num: '329', bairro: "São João do Tauape", cidade: "Fortaleza", sigla: "CE", } 
-            },            
+            },
             { 
-            nome: "EDIFICIO TURANDOT", nomeSimplificado: "edificio turandot", lat: "-3.735558", lon: "-38.474554", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "EDIFÍCIO BROOKSVILLE", nomeSimplificado: "edificio brooksville", lat: "-3.741110", lon: "-38.492420", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Coronel Jucá', num: '1000', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
+            nome: "EDIFÍCIO BUCKINGAHN", nomeSimplificado: "edificio buckingahn", lat: "-3.726080", lon: "-38.501640", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'José VIlar', num: '180', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
+            nome: "EDIFÍCIO LOS ANGELES", nomeSimplificado: "edificio los angeles", lat: "-3.735700", lon: "-38.481540", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Paulo Morais', num: '303', bairro: "Varjota", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
+            nome: "EDIFÍCIO PALAZZIO TICIANA", nomeSimplificado: "edificio palazzio ticiana", lat: "-3.740480", lon: "-38.495150", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Paula Ney', num: '365', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
+            nome: "EDIFÍCIO TURANDOT", nomeSimplificado: "edificio turandot", lat: "-3.735558", lon: "-38.474554", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Alfeu Aboim', num: '535', bairro: "Papicu", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
@@ -327,10 +335,6 @@ class Local {
             end: { rua: 'Leonardo Mota', num: '400', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "LOS ANGELES", nomeSimplificado: "los angeles", lat: "-3.735700", lon: "-38.481540", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
-            end: { rua: 'Paulo Morais', num: '303', bairro: "Varjota", cidade: "Fortaleza", sigla: "CE", } 
-            },
-            { 
             nome: "LUIS TEIXEIRA", nomeSimplificado: "luis teixeira", lat: "-3.737700", lon: "-38.510410", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Catão Mamede', num: '237', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
             },
@@ -445,10 +449,6 @@ class Local {
             { 
             nome: "OMMI", nomeSimplificado: "ommi", lat: "-3.733540", lon: "-38.492970", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Pereira Valente', num: '945', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
-            },
-            { 
-            nome: "PALAZZIO TICIANA", nomeSimplificado: "palazzio ticiana", lat: "-3.740480", lon: "-38.495150", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
-            end: { rua: 'Paula Ney', num: '365', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
             nome: "PARAÍSO DA MARAPONGA", nomeSimplificado: "paraiso da maraponga", lat: "-3.796610", lon: "-38.567440", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
