@@ -140,7 +140,7 @@ class Mapa {
 
     addMultMaker(array, callback) {
         array.forEach(el => {
-            this.markers.push(this.addMarker(el, callback))
+            if(el.ativo) this.markers.push(this.addMarker(el, callback))
         })
     }
 

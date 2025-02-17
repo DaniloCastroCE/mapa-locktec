@@ -22,7 +22,9 @@ const init = () => {
         } else {
 
             if (e.target.value.length >= 2) {
-                const arrayBuscaLocais = locais.locais.filter(local => local.nomeSimplificado.includes(e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim()))
+                const arrayBuscaLocais = locais.locais.filter(local => 
+                    local.nomeSimplificado.includes(e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim())
+                )
 
                 arrayBuscaLocais.forEach(local => {
                     ulBuscar.innerHTML += `
@@ -357,7 +359,6 @@ Endereço: ${el.local.end.rua}, ${el.local.end.num} - ${el.local.end.bairro}
     } else {
         alert(`\n ! ! ! Não existe condominio na lista de selecionados para copiar ! ! ! \n`)
     }
-
 }
 
 const onclickBtnExibir = (op) => {
