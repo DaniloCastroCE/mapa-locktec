@@ -167,6 +167,10 @@ class Local {
             end: { rua: '26° Batalhão', num: '291', bairro: "Mondubim", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
+            nome: "EDIFICIO ARAÇANGA", nomeSimplificado: "edificio aracanga", lat: "-3.761224", lon: "-38.509354", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Evaristo Reis', num: '329', bairro: "São João do Tauape", cidade: "Fortaleza", sigla: "CE", } 
+            },            
+            { 
             nome: "EDIFICIO TURANDOT", nomeSimplificado: "edificio turandot", lat: "-3.735558", lon: "-38.474554", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Alfeu Aboim', num: '535', bairro: "Papicu", cidade: "Fortaleza", sigla: "CE", } 
             },
