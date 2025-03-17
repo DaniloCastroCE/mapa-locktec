@@ -696,7 +696,7 @@ class Local {
             },
 
             { 
-            nome: "VILLAGE DOS PINHEIROS", nomeSimplificado: "village dos pinheiros", lat: "-3.782103 ", lon: "-38.567868", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "VILLAGE DOS PINHEIROS", nomeSimplificado: "village dos pinheiros", lat: "-3.782084", lon: "-38.567862", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Capitão Américo Menezes', num: '277', bairro: "Parangaba", cidade: "Fortaleza", sigla: "CE", } 
             },
             
