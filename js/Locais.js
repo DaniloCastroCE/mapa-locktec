@@ -427,7 +427,7 @@ class Local {
             end: { rua: 'Afonso Celso', num: '225', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "MORADA VILA GOES", nomeSimplificado: "morada vila goes", lat: "-3.736172", lon: "-38.568684", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "MORADA VILA GOES", nomeSimplificado: "morada vila goes", lat: "-3.736172", lon: "-38.568684", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Bezerra de Menezes', num: '2690', bairro: "Presidente Kennedy", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
@@ -694,6 +694,12 @@ class Local {
             nome: "VILLAGE ÁGUA FRIA (QUADRA 02)", nomeSimplificado: "village agua fria (quadra 02)", lat: "-3.776330", lon: "-38.472980", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'F', num: '101', bairro: "Edson Queiroz", cidade: "Fortaleza", sigla: "CE", } 
             },
+
+            { 
+            nome: "VILLAGE DOS PINHEIROS", nomeSimplificado: "village dos pinheiros", lat: "-3.782103 ", lon: "-38.567868", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Capitão Américo Menezes', num: '277', bairro: "Parangaba", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            
             { 
             nome: "VILLAGE PORTO REAL", nomeSimplificado: "village porto real", lat: "-3.820985", lon: "-38.555436", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Rua D', num: '50', bairro: "Parque Dois Irmãos", cidade: "Fortaleza", sigla: "CE", } 
