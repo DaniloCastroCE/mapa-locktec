@@ -59,7 +59,6 @@ Para atualizar, adiconar ou remover os condominios, você deve acessar o arquivo
 │   ├── 📄 mapa.css  
 │   ├── 📄 padrao.css  
 │   └── 📄 toast.css  
-│
 ├── 📁 **js**  
 │   ├── 📄 app.js  
 │   ├── 📄 GeoJson.js  
