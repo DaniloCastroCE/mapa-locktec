@@ -49,7 +49,7 @@ O sistema permite a busca de condomínios, retornando informações detalhadas d
 
 Para atualizar, adicionar ou remover condomínios, acesse o arquivo Locais.js e modifique o array locais, inserindo ou removendo os objetos conforme necessário.
 
-*Exemplo de um condominios cadastrada*:
+*Exemplo de um condominio cadastrada*:
 
 ```javascript
 { 
