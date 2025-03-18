@@ -47,8 +47,13 @@ Para atualizar, adiconar ou remover os condominios, você deve acessar o arquivo
 ```
 
 *Observação*: 
+
 1º - Existem algumas linhas de código comentadas, indicando onde começam os condomínios de Fortaleza, os de fora de Fortaleza e a sede.
+
 2º - Organize os condomínios de maneira ordenada, em ordem alfabética.
+
+3º - *!IMPORTANTE!* A variável nomeSimplificado deve ser inserida em letras minúsculas e sem acento.
+
 
 ## Estrutura de pasta
 
