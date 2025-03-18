@@ -35,9 +35,9 @@ Página criada para facilitar a busca de endereços dos condomínios da Locktec,
 Não há necessidade de instalação. Basta abrir o arquivo index.html no navegador.
 
 ### Atualizar, adiconar ou remover condominios.
-Para atualizar, adiconar ou remover os condominios, você deve acessar o arquivo Locais.js.
+Para atualizar, adicionar ou remover condomínios, acesse o arquivo Locais.js e modifique o array locais, inserindo ou removendo os objetos conforme necessário.
 
-*Exemplo de um condominios cadastrada*:
+*Exemplo de como cadastrar um condominio*:
 
 ```javascript
 { 
