@@ -8,15 +8,19 @@
 
 • Instalação
 
+• Atualizar, adiconar ou remover condominios.
+
 • Estrutura de pasta
 
 • Explicação o código Jasvascript
 
 • Autor
 
+
 ## Sobre
 
 Página criada para facilitar a busca de endereços dos condomínios da Locktec, com o objetivo de otimizar o planejamento de rotas para inspetores e técnicos, além de auxiliar na definição de estratégias de segurança e outras atividades relacionadas.
+
 
 ## Tecnologias
 
@@ -25,37 +29,55 @@ Página criada para facilitar a busca de endereços dos condomínios da Locktec,
 • JAVASCRIPT
 • Biblioteca Open Street Map
 
+
 ## Instalação
 
 Não há necessidade de instalação. Basta abrir o arquivo index.html no navegador.
 
+### Atualizar, adiconar ou remover condominios.
+Para atualizar, adiconar ou remover os condominios, você deve acessar o arquivo Locais.js.
+
+*Exemplo de um condominios cadastrada*:
+
+```javascript
+{ 
+    nome: "LOCKTEC", nomeSimplificado: "locktec", lat: "-3.730170", lon: "-38.480570", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "SEDE",   
+    end: { rua: 'Oliveira Viana', num: '77', bairro: "Vicente Pinzon", cidade: "Fortaleza", sigla: "CE", } 
+},
+```
+
+*Observação*: 
+1º - Existem algumas linhas de código comentadas, indicando onde começam os condomínios de Fortaleza, os de fora de Fortaleza e a sede.
+2º - Organize os condomínios de maneira ordenada, em ordem alfabética.
+
 ## Estrutura de pasta
 
-📁 Pasta Raiz
-├── 📁 css
-│   ├── 📄 box.css
-│   ├── 📄 loadding.css
-│   ├── 📄 mapa.css
-│   ├── 📄 padrao.css
-│   └── 📄 toast.css
+📁 **Pasta Raiz**  
+├── 📁 **css**  
+│   ├── 📄 box.css  
+│   ├── 📄 loadding.css  
+│   ├── 📄 mapa.css  
+│   ├── 📄 padrao.css  
+│   └── 📄 toast.css  
 │
-├── 📁 js
-│   ├── 📄 app.js
-│   ├── 📄 GeoJson.js
-│   ├── 📄 Loading.js
-│   ├── 📄 Locais.js
-│   ├── 📄 Mapa.js
-│   └── 📄 Toast.js
-│
+├── 📁 **js**  
+│   ├── 📄 app.js  
+│   ├── 📄 GeoJson.js  
+│   ├── 📄 Loading.js  
+│   ├── 📄 Locais.js  
+│   ├── 📄 Mapa.js  
+│   └── 📄 Toast.js  
 └── 📄 index.html
+
 
 ## Explicação o código Jasvascript
 
 ### 📄 APP.JS
 Este é o arquivo principal que inicia o script e contém todos os objetos e funções necessários para a execução do código.
 
-#### Variaveis e Classes
-*CLASSES*
+
+#### CLASSES
+
 loading: tela de espera.
 
 mapa: o mapa e suas funcionalidades.
@@ -64,7 +86,8 @@ locais: array de condominios e suas funcionalidades.
 
 toast: notificações de copiado.
 
-*VARIAVEIS*
+#### VARIAVEIS
+
 estado: notifica o estado do sistema.
 
 bairros: notifica se é para adiconar o bairro ou não.
