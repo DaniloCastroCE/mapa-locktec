@@ -21,17 +21,14 @@
 
 ## Sobre
 
-Página criada para facilitar a busca de endereços dos condomínios da Locktec, com o objetivo de otimizar o planejamento de rotas para inspetores e técnicos, além de auxiliar na definição de estratégias de segurança e outras atividades relacionadas.
+Página desenvolvida exclusivamente com front-end, criada para facilitar a busca de endereços dos condomínios da Locktec. Seu objetivo é otimizar o planejamento de rotas para inspetores e técnicos, além de apoiar na definição de estratégias de segurança e em outras atividades relacionadas à gestão dos condomínios.
 
 
 ## Tecnologias
 
 • HTML
-
 • CSS
-
 • JAVASCRIPT
-
 • Biblioteca Open Street Map
 
 
@@ -41,10 +38,12 @@ Não há necessidade de instalação. Basta abrir o arquivo index.html no navega
 
 
 ## Funcionalidades
+
 O sistema permite a busca de condomínios, retornando informações detalhadas de cadastro, como nome do condomínio, endereço completo, latitude, longitude, e até links para pesquisa no Google, entre outras informações relevantes. Além disso, o sistema oferece a possibilidade de ocultar condomínios específicos, exibindo apenas aqueles que forem desejados pelo usuário. Também há a funcionalidade de copiar o endereço de um ou mais condomínios, facilitando o compartilhamento ou uso dessas informações.
 
 
 ### Atualizar, adiconar ou remover condominios.
+
 Para atualizar, adicionar ou remover condomínios, acesse o arquivo Locais.js e modifique o array locais, inserindo ou removendo os objetos conforme necessário.
 
 *Exemplo de um condominios cadastrada*:
@@ -91,7 +90,6 @@ Este é o arquivo principal que inicia o script e contém todos os objetos e fun
 
 
 #### CLASSES
-
 loading: tela de espera.
 
 mapa: o mapa e suas funcionalidades.
@@ -101,7 +99,6 @@ locais: array de condominios e suas funcionalidades.
 toast: notificações de copiado.
 
 #### VARIAVEIS
-
 estado: notifica o estado do sistema.
 
 bairros: notifica se é para adiconar o bairro ou não.
