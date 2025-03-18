@@ -106,9 +106,9 @@ estado: notifica o estado do sistema.
 
 bairros: notifica se é para adiconar o bairro ou não.
 
-dVisivel: SVG de um olha
+dVisivel: SVG de um olho, indicando que todos os condomínios estão sendo exibidos.
 
-dNoVisivel: SVG de um olho cortado
+dNoVisivel: SVG de um olho cortado, indicando que alguns ou todos os condomínios não estão sendo exibidos.
 
 ultCLick: Serve para identificar o último condomínio clicado, sendo uma variável localizada acima da função onclickMarker.
 
