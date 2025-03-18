@@ -1302,8 +1302,4 @@ class Local {
         }
 
     }
-
-    getListas() {
-
-    }
 }
