@@ -120,7 +120,7 @@ ultCLick: Serve para identificar o último condomínio clicado, sendo uma variá
 Inicia o condominio criar os marker's (Marcadores) e adicionado um evento no input de busca dos condominios.
 
 #### Função 3 - func_painelFerramentas(click)
-Função responsável por capturar os cliques nos botões da lista, adicionar bairros e avançar (que não foi construída), executando a ação correspondente.
+Esta função é responsável por capturar os cliques nos botões. Ela pode realizar diferentes ações, como adicionar uma lista, adicionar bairros ou ativar a busca avançada (que ainda não foi implementada). Cada clique aciona a ação correspondente de acordo com o botão pressionado.
 
 #### Função 4 - exibir()
 Constrói um campo de lista com os condomínios selecionados, com base no clique do usuário.
