@@ -27,8 +27,11 @@ Página desenvolvida exclusivamente com front-end, criada para facilitar a busca
 ## Tecnologias
 
 • HTML
+
 • CSS
+
 • JAVASCRIPT
+
 • Biblioteca Open Street Map
 
 
