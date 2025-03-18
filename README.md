@@ -27,8 +27,11 @@ Página criada para facilitar a busca de endereços dos condomínios da Locktec,
 ## Tecnologias
 
 • HTML
+
 • CSS
+
 • JAVASCRIPT
+
 • Biblioteca Open Street Map
 
 
