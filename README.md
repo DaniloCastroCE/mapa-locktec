@@ -8,6 +8,8 @@
 
 • Instalação
 
+• Funcionalidades
+
 • Atualizar, adiconar ou remover condominios.
 
 • Estrutura de pasta
@@ -34,10 +36,15 @@ Página criada para facilitar a busca de endereços dos condomínios da Locktec,
 
 Não há necessidade de instalação. Basta abrir o arquivo index.html no navegador.
 
+
+## Funcionalidades
+O sistema permite a busca de condomínios, retornando informações detalhadas de cadastro, como nome do condomínio, endereço completo, latitude, longitude, e até links para pesquisa no Google, entre outras informações relevantes. Além disso, o sistema oferece a possibilidade de ocultar condomínios específicos, exibindo apenas aqueles que forem desejados pelo usuário. Também há a funcionalidade de copiar o endereço de um ou mais condomínios, facilitando o compartilhamento ou uso dessas informações.
+
+
 ### Atualizar, adiconar ou remover condominios.
 Para atualizar, adicionar ou remover condomínios, acesse o arquivo Locais.js e modifique o array locais, inserindo ou removendo os objetos conforme necessário.
 
-*Exemplo de como cadastrar um condominio*:
+*Exemplo de um condominios cadastrada*:
 
 ```javascript
 { 
