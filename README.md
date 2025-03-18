@@ -102,9 +102,9 @@ locais: array de condominios e suas funcionalidades.
 toast: notificações de copiado.
 
 #### VARIAVEIS
-estado: notifica o estado do sistema.
+estado: Armazena o status do sistema, indicando se está em modo: "exibir", "addRemBairros", "buscarAvancada" e " "
 
-bairros: notifica se é para adiconar o bairro ou não.
+bairros: Armazena a informação sobre a exibição da delimitação dos bairros.
 
 dVisivel: SVG de um olho, indicando que todos os condomínios estão sendo exibidos.
 
