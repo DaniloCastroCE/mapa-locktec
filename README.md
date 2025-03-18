@@ -52,7 +52,7 @@ Para atualizar, adiconar ou remover os condominios, você deve acessar o arquivo
 
 2º - Organize os condomínios de maneira ordenada, em ordem alfabética.
 
-3º - *!IMPORTANTE!* A variável nomeSimplificado deve ser inserida em letras minúsculas e sem acento.
+3º - *! IMPORTANTE !* A variável nomeSimplificado deve ser inserida em letras minúsculas e sem acento.
 
 
 ## Estrutura de pasta
