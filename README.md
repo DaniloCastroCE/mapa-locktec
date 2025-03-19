@@ -14,7 +14,7 @@
 
 • Estrutura de pasta
 
-• Explicado o código Jasvascript
+• Explicação do código Jasvascript
 
 • Autor
 
@@ -86,7 +86,7 @@ Para atualizar, adicionar ou remover condomínios, acesse o arquivo Locais.js e 
 └── 📄 index.html
 
 
-## Explicado o código Jasvascript
+## Explicação do código Jasvascript
 
 ### 📄 APP.JS
 Este é o arquivo principal que inicia o script e contém todos os objetos e funções necessários para a execução do código.
