@@ -427,9 +427,9 @@ class Local {
             end: { rua: 'Afonso Celso', num: '225', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "MORADA VILA GOES", nomeSimplificado: "morada vila goes", lat: "-3.736172", lon: "-38.568684", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
-            end: { rua: 'Avenida Bezerra de Menezes', num: '2690', bairro: "Presidente Kennedy", cidade: "Fortaleza", sigla: "CE", } 
-            },
+            nome: "NAPOLIS", nomeSimplificado: "napolis", lat: "-3.745447", lon: "-38.472827", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Vilebaldo Aguiar', num: '1740', bairro: "Cocó", cidade: "Fortaleza", sigla: "CE", } 
+            },            
             { 
             nome: "NEBADON", nomeSimplificado: "nebadon", lat: "-3.754180", lon: "-38.528890", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Depudato Oswaldo Studart', num: '362', bairro: "Fátima", cidade: "Fortaleza", sigla: "CE", } 
@@ -569,7 +569,7 @@ class Local {
             { 
             nome: "SAN MATHEUS", nomeSimplificado: "san matheus", lat: "-3.790470", lon: "-38.463780", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Olegário Memória', num: '2973', bairro: "Sapiranga", cidade: "Fortaleza", sigla: "CE", } 
-            },
+            },         
             { 
             nome: "SAN THIAGO", nomeSimplificado: "san thiago", lat: "-3.733570", lon: "-38.479100", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Engenheiro Alberto Sá', num: '231', bairro: "Papicu", cidade: "Fortaleza", sigla: "CE", } 
@@ -665,6 +665,10 @@ class Local {
             { 
             nome: "VILA EUSÉBIO", nomeSimplificado: "vila eusebio", lat: "-3.882410", lon: "-38.455850", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Vicente Leitão', num: '819', bairro: "Centro", cidade: "Eusébio", sigla: "CE", } 
+            },
+            { 
+            nome: "VILA GOES", nomeSimplificado: "vila goes", lat: "-3.736172", lon: "-38.568684", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Avenida Bezerra de Menezes', num: '2690', bairro: "Presidente Kennedy", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
             nome: "VILA ROMANA", nomeSimplificado: "vila romana", lat: "-3.800450", lon: "-38.529460", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
@@ -1002,6 +1006,10 @@ class Local {
             nome: "SAINT TROPEZ", nomeSimplificado: "saint tropez", lat: "-22.904761", lon: "-43.114009", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
             end: { rua: 'travessa Coelho Gomes', num: '10', bairro: "Icaraí", cidade: "Niterói", sigla: "RJ", } 
             },
+            { 
+            nome: "SAN REMO", nomeSimplificado: "san remo", lat: "-23.584907", lon: "-46.676192", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "SÃO PAULO",   
+            end: { rua: 'Joaquim Floriano', num: '636', bairro: "Itaim Bibi", cidade: "São paulo", sigla: "SP", } 
+            },            
             { 
             nome: "SÃO CAETANO", nomeSimplificado: "sao caetano", lat: "-8.113060", lon: "-35.292390", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RECIFE",   
             end: { rua: 'Cândido Cardoso Fontes', num: '87', bairro: "Matriz", cidade: "Vitória de Santo Antão", sigla: "PE", } 
