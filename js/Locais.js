@@ -791,7 +791,7 @@ class Local {
             end: { rua: 'Barão de Pirassinunga', num: '33', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ", } 
             },
             { 
-            nome: "CHATEAU BLANC", nomeSimplificado: "chateau blanc", lat: "-22.965923", lon: "-43.200099", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
+            nome: "CHATEAU BLANC (Em Implantação)", nomeSimplificado: "chateau blanc em implantacao", lat: "-22.965923", lon: "-43.200099", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
             end: { rua: 'Sacopã', num: '792', bairro: "Lagoa", cidade: "Rio de Janeiro", sigla: "RJ", } 
             },
             { 
