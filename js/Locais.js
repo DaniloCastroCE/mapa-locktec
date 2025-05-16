@@ -223,6 +223,10 @@ class Local {
             end: { rua: 'Ministro Eduardo Ellery Barreira', num: '60', bairro: "Guararapes", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
+            nome: "GREEN VILLE (Em Implantação)", nomeSimplificado: "lourdes saboia em implantacao", lat: "-3.747990", lon: "-38.472230", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Andrade Furtado', num: '1977', bairro: "Cocó", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
             nome: "HELDER LEITE JUNIOR", nomeSimplificado: "helder leite junior", lat: "-3.803940", lon: "-38.537990", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Rua dos Sabías', num: '103', bairro: "Passaré", cidade: "Fortaleza", sigla: "CE", } 
             },
@@ -337,6 +341,10 @@ class Local {
             { 
             nome: "LIVIO ARRUDA", nomeSimplificado: "livio arruda", lat: "-3.730229", lon: "-38.494355", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Leonardo Mota', num: '400', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
+            nome: "LOURDES SABOIA (Em Implantação)", nomeSimplificado: "lourdes saboia em implantacao", lat: "-3.742920", lon: "-38.492780", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Coronel Jucá', num: '1275', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
             nome: "LUIS TEIXEIRA", nomeSimplificado: "luis teixeira", lat: "-3.737700", lon: "-38.510410", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
@@ -683,6 +691,10 @@ class Local {
             end: { rua: 'Professor Francisco Gonçalves', num: '355 e 375', bairro: "Dionisio Torres", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
+            nome: "VILLA REAL (Em Implantação)", nomeSimplificado: "villa real em implantacao", lat: "-3.790920", lon: "-38.574970", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Dom Henrique', num: '11', bairro: "VIla Peri", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
             nome: "VILLA RICA", nomeSimplificado: "villa rica", lat: "-3.745283", lon: "-38.502601", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Antônio Sales', num: '2377', bairro: "Joaquim Tavora", cidade: "Fortaleza", sigla: "CE", } 
             },
@@ -779,7 +791,7 @@ class Local {
             end: { rua: 'Barão de Pirassinunga', num: '33', bairro: "Tijuca", cidade: "Rio de Janeiro", sigla: "RJ", } 
             },
             { 
-            nome: "CHATEAU BLANC", nomeSimplificado: "chateau blanc", lat: "-22.965923", lon: "-43.200099", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
+            nome: "CHATEAU BLANC", nomeSimplificado: "chateau blanc", lat: "-22.965923", lon: "-43.200099", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
             end: { rua: 'Sacopã', num: '792', bairro: "Lagoa", cidade: "Rio de Janeiro", sigla: "RJ", } 
             },
             { 
@@ -887,6 +899,10 @@ class Local {
             end: { rua: 'Francisco Ambrósio de Barros Leite', num: '152', bairro: "Bairro Novo", cidade: "Olinda", sigla: "PE", } 
             },
             { 
+            nome: "ITAPUAMA II (Em Implantação)", nomeSimplificado: "itapuama ii em implantacao", lat: "-8.295170", lon: "-34.954200", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RECIFE",   
+            end: { rua: 'Manoel Luiz da Silva', num: '372', bairro: "Itapuama", cidade: "Cabo de Santo Agostinho", sigla: "PE", } 
+            },
+            { 
             nome: "KENSINGTON", nomeSimplificado: "kensington", lat: "-23.563632", lon: "-46.680952", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "SÃO PAULO",   
             end: { rua: 'Cônego Eugênio leite', num: '613', bairro: "Pinheiros", cidade: "São Paulo", sigla: "SP", } 
             },
@@ -985,6 +1001,10 @@ class Local {
             { 
             nome: "REGINA", nomeSimplificado: "regina", lat: "-22.914460", lon: "-43.231520", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
             end: { rua: 'Isidro de Figueredo', num: '31', bairro: "Maracanã", cidade: "Rio de Janeiro", sigla: "RJ", } 
+            },
+            { 
+            nome: "REMBRANDT VAN RIJN (Em Implantação)", nomeSimplificado: "rembrandt van rijn em implantacao", lat: "-22.994420", lon: "-43253630", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
+            end: { rua: 'Avenidade Niemeyer', num: '965', bairro: "São Conrado", cidade: "Rio de janeiro", sigla: "RJ", } 
             },
             { 
             nome: "REQUINTE DO RIO", nomeSimplificado: "requinte do rio", lat: "-22.919360", lon: "-43.224330", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
