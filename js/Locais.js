@@ -955,7 +955,7 @@ class Local {
             end: { rua: 'Cajueiro', num: '512', bairro: "Porto de Galinhas", cidade: "Ipojuca", sigla: "PE", } 
             },
             { 
-            nome: "NOVELLETO", nomeSimplificado: "novelleto", lat: "-23.526110", lon: "-46.705129", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "SÃO PAULO",   
+            nome: "NOVELLETO", nomeSimplificado: "novelleto", lat: "-23.526110", lon: "-46.705129", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "SÃO PAULO",   
             end: { rua: 'Antônio de Mariz', num: '10', bairro: "Alto da Lapa", cidade: "São Paulo", sigla: "SP", } 
             },
             { 
