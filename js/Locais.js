@@ -146,6 +146,12 @@ class Local {
             nome: "COSTA BARRETO", nomeSimplificado: "costa barreto", lat: "-3.747140", lon: "-38.505040", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Joaquim Nabuco', num: '2485', bairro: "Dionísio Torres", cidade: "Fortaleza", sigla: "CE", } 
             },
+
+            { 
+            nome: "CRISTINA MARIA", nomeSimplificado: "cristina maria", lat: "-3.726348", lon: "-38.488425", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Avenida da Abolição', num: '3450', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            
             { 
             nome: "CYNTHIA", nomeSimplificado: "cynthia", lat: "-3.747121", lon: "-38.467609", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Vilebaldo Aguiar', num: '2300', bairro: "Cocó", cidade: "Fortaleza", sigla: "CE", } 
@@ -347,6 +353,10 @@ class Local {
             end: { rua: 'Coronel Jucá', num: '1275', bairro: "Meireles", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
+            nome: "LUCAS MENDES", nomeSimplificado: "lucas mendes", lat: "-3.749067", lon: "-38.454188", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Avenida Santos Dumont', num: '7810', bairro: "Praia do Futuro", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
             nome: "LUIS TEIXEIRA", nomeSimplificado: "luis teixeira", lat: "-3.737700", lon: "-38.510410", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Catão Mamede', num: '237', bairro: "Aldeota", cidade: "Fortaleza", sigla: "CE", } 
             },
@@ -439,7 +449,7 @@ class Local {
             end: { rua: 'Vilebaldo Aguiar', num: '1740', bairro: "Cocó", cidade: "Fortaleza", sigla: "CE", } 
             },            
             { 
-            nome: "NEBADON", nomeSimplificado: "nebadon", lat: "-3.754180", lon: "-38.528890", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "NEBADON", nomeSimplificado: "nebadon", lat: "-3.754180", lon: "-38.528890", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Depudato Oswaldo Studart', num: '362', bairro: "Fátima", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
