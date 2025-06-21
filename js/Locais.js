@@ -229,7 +229,7 @@ class Local {
             end: { rua: 'Ministro Eduardo Ellery Barreira', num: '60', bairro: "Guararapes", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "GREEN VILLE (Em Implantação)", nomeSimplificado: "lourdes saboia em implantacao", lat: "-3.747990", lon: "-38.472230", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "GREEN VILLE", nomeSimplificado: "lourdes saboia", lat: "-3.747990", lon: "-38.472230", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Andrade Furtado', num: '1977', bairro: "Cocó", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
@@ -701,7 +701,7 @@ class Local {
             end: { rua: 'Professor Francisco Gonçalves', num: '355 e 375', bairro: "Dionisio Torres", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
-            nome: "VILLA REAL (Em Implantação)", nomeSimplificado: "villa real em implantacao", lat: "-3.790920", lon: "-38.574970", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            nome: "VILLA REAL", nomeSimplificado: "villa real", lat: "-3.790920", lon: "-38.574970", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Dom Henrique', num: '11', bairro: "VIla Peri", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
