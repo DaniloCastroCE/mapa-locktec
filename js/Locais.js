@@ -953,7 +953,7 @@ class Local {
             end: { rua: 'Antônio Passos', num: '51', bairro: "Boa Viagem", cidade: "Recife", sigla: "PE", } 
             },
             { 
-            nome: "MONT BLANC", nomeSimplificado: "mont blanc", lat: "-22.982935", lon: "-43.201595", ativo: false, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
+            nome: "MONT BLANC", nomeSimplificado: "mont blanc", lat: "-22.982935", lon: "-43.201595", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "RIO DE JANEIRO",   
             end: { rua: 'Barão da Torre', num: '192', bairro: "Ipanema", cidade: "Rio de Janeiro", sigla: "RJ", } 
             },
             { 
