@@ -521,6 +521,10 @@ class Local {
             end: { rua: 'Rua das Carnaúbas', num: '570', bairro: "Passaré", cidade: "Fortaleza", sigla: "CE", } 
             },
             { 
+            nome: "PRAIA MANSA", nomeSimplificado: "praia mansa", lat: "-3.811886", lon: "-38.483594", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
+            end: { rua: 'Tomás Ildefonso', num: '155', bairro: "Cambeba", cidade: "Fortaleza", sigla: "CE", } 
+            },
+            { 
             nome: "PRUDENTE BRASIL", nomeSimplificado: "prudente brasil", lat: "-3.803242", lon: "-38.535179", ativo: true, tipo: "não definido", dvr: ["não definido"], locktec: "FORTALEZA",   
             end: { rua: 'Avenida Heróis do Acre', num: '725', bairro: "Passaré", cidade: "Fortaleza", sigla: "CE", } 
             },
