@@ -5486,7 +5486,7 @@ class Local {
   }
 
   getBuscarNomeValorExato(nome) {
-    return this.locais.find(local => local.nomeSimplificado === nome);
+    return this.locais.find(local => local.nomeSimplificado.toLowerCase() === nome.toLowerCase());
   }
 
   getLocalIdMarker(idMarker) {
