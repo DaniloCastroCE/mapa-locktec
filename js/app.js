@@ -1,3 +1,4 @@
+const last_update = "30/06/2025"
 const loading = new Loading('loading')
 const mapa = new Mapa([-3.74565, -38.51723], 14, new GeoJson())
 const locais = new Local()
@@ -22,7 +23,7 @@ const init = () => {
         } else {
 
             if (e.target.value.length >= 2) {
-                const arrayBuscaLocais = locais.locais.filter(local => 
+                const arrayBuscaLocais = locais.locais.filter(local =>
                     local.nomeSimplificado.includes(e.target.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim())
                 )
 
@@ -330,7 +331,7 @@ const deletaItemLista = (index) => {
 const onclickCopy = (idMarker) => {
     const local = locais.getLocalIdMarker(idMarker)
     let copy =
-`*${local.nome}*
+        `*${local.nome}*
 Endereço: ${local.end.rua}, ${local.end.num} - ${local.end.bairro}
 `
     navigator.clipboard.writeText(copy)
@@ -395,4 +396,66 @@ const onclickBtnExibir = (op) => {
     }
 }
 
-init() // Inicador
+let tentativas = 3;
+
+function carregarComTentativas() {
+    loading.in();
+
+    locais.carregarLocaisApi()
+        .then((result) => {
+            if (!result) {
+                console.error("A resposta da API não retornou um objeto válido!");
+                return;
+            }
+
+            if (result.status === 'success') {
+                init();
+                console.log(`O mapa Atualizou com sucesso ! (${tentativas})`)
+                loading.out();
+
+            } else if (result.status === "error") {
+                tentativas--;
+                if (tentativas > 0) {
+                    console.log(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
+                    alert(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
+                    setTimeout(() => {
+                        carregarComTentativas();
+                    }, 3500)
+                } else {
+                    init();
+                    console.log('Número máximo de tentativas atingido.');
+                    /*if(confirm('Deseja reiniciar novamente')){
+                      tentativas = 3
+                      return carregarComTentativas();
+                    }*/
+                   setTimeout(() => {
+                       alert(`Número máximo de tentativas atingido.\n\nO mapa não foi atualizado.\n\nÚltima atualização realizada em: ${last_update}\n\nRecomendo que tente novamente ou pressione F5 para atualizar a página.`);
+                       loading.out();
+                   },100)
+                }
+            }
+        })
+        .catch((err) => {
+            console.error("Erro de rede ou exceção: ", err);
+            tentativas--;
+            if (tentativas > 0) {
+                console.log(`Tentativa de atualizar o mapa falhou por erro de rede.\n\nTentativas restantes: ${tentativas}`);
+                alert(`Tentativa de atualizar o mapa falhou por erro de rede.\n\nTentativas restantes: ${tentativas}`);
+                setTimeout(() => {
+                    carregarComTentativas();
+                }, 3000)
+            } else {
+                init();
+                console.log('Número máximo de tentativas atingido.');
+                /*if(confirm('Deseja reiniciar novamente')){
+                    tentativas = 3
+                    return carregarComTentativas();
+                }*/
+                alert(`Número máximo de tentativas atingido.\n\nO mapa não foi atualizado.\n\nÚltima atualização realizada em: ${last_update}\n\nRecomendo que tente novamente ou pressione F5 para atualizar a página.`);
+                loading.out();
+            }
+        });
+}
+
+carregarComTentativas();
+
