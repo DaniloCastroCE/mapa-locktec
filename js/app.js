@@ -171,8 +171,8 @@ const buscarAvancada = () => {
 
 const goLocktec = () => {
     try {
-        const locktec = locais.getBuscarLocais('locktec')
-        markerLocktec = mapa.getMarker(locktec[0].idMarker)
+        const locktec = locais.getBuscarNomeValorExato('LOCKTEC')
+        markerLocktec = mapa.getMarker(locktec.idMarker)
         mapa.map.setView(markerLocktec.getLatLng(), mapa.map.getZoom())
         markerLocktec.openPopup()
     } catch (error) {
