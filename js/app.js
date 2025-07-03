@@ -1,4 +1,4 @@
-const last_update = "30/06/2025"
+const last_update = "03/07/2025"
 const loading = new Loading('loading')
 const mapa = new Mapa([-3.74565, -38.51723], 14, new GeoJson())
 const locais = new Local()
