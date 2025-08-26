@@ -288,27 +288,8 @@ class Local {
     }
   },
   {
-    nome: "ATALANTA",
-    nomeSimplificado: "atalanta",
-    lat: "-3.815260",
-    lon: "-38.468410",
-    ativo: true,
-    tipo: "não definido",
-    dvr: [
-      "não definido"
-    ],
-    locktec: "FORTALEZA",
-    end: {
-      rua: "Avenida Odilon Guimarães",
-      num: "3740",
-      bairro: "Lagoa Redonda",
-      cidade: "Fortaleza",
-      sigla: "CE"
-    }
-  },
-  {
-    nome: "ATHALANTA",
-    nomeSimplificado: "athalanta",
+    nome: "ATHALANTA (Rua Leonardo Mota/meireles)",
+    nomeSimplificado: "athalanta (rua leonardo mota/meireles)",
     lat: "-3.729470",
     lon: "-38.494080",
     ativo: true,
@@ -321,6 +302,25 @@ class Local {
       rua: "Leonardo Mota",
       num: "340",
       bairro: "Meireles",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "ATLANTA (Av. Odilon Guimarães/lagoa Redonda)",
+    nomeSimplificado: "atlanta (av. odilon guimaraes/lagoa redonda)",
+    lat: "-3.815260",
+    lon: "-38.468410",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Avenida Odilon Guimarães",
+      num: "3740",
+      bairro: "Lagoa Redonda",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -1935,7 +1935,7 @@ class Local {
     end: {
       rua: "Visconde de Cairu",
       num: "720",
-      bairro: "Jardim Guanabara",
+      bairro: "Vicente Pinzon",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -2247,18 +2247,18 @@ class Local {
   {
     nome: "LA VIDA PARQUE",
     nomeSimplificado: "la vida parque",
-    lat: "-3.909150",
-    lon: "-38.447850",
+    lat: "-3.908955",
+    lon: "-38.447896",
     ativo: true,
     tipo: "não definido",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
-      rua: "Avenida Noe Leite de Freitas",
+      rua: "Avenida Noé Leite de Freitas",
       num: "393",
-      bairro: "Lagoinha",
+      bairro: "Parque Havai",
       cidade: "Eusébio",
       sigla: "CE"
     }
@@ -2549,6 +2549,25 @@ class Local {
     }
   },
   {
+    nome: "MAESTRO FRANCISCO BRAGA",
+    nomeSimplificado: "maestro francisco braga",
+    lat: "-22.966159",
+    lon: "-43.191038",
+    ativo: true,
+    tipo: "portaria",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Maestro Francisco Braga",
+      num: "295",
+      bairro: "Copacabana",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
+    }
+  },
+  {
     nome: "MAGNA ACACIA",
     nomeSimplificado: "magna acacia",
     lat: "-3.872430",
@@ -2790,7 +2809,7 @@ class Local {
     end: {
       rua: "Avenida Zeze Diogo",
       num: "2970",
-      bairro: "Praia do Futuro",
+      bairro: "Praia do Futuro I",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -2988,17 +3007,17 @@ class Local {
   {
     nome: "MONT BLANC",
     nomeSimplificado: "mont blanc",
-    lat: "-22.982935",
-    lon: "-43.201595",
+    lat: "-22.983331",
+    lon: "-43.201691",
     ativo: true,
     tipo: "não definido",
     dvr: [
-      "não definido"
+      "simplus"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "RIO DE JANEITO",
     end: {
       rua: "Barão da Torre",
-      num: "192",
+      num: "195",
       bairro: "Ipanema",
       cidade: "Rio de Janeiro",
       sigla: "RJ"
@@ -3417,7 +3436,7 @@ class Local {
     end: {
       rua: "Avenida Engenheiro Luiz Vieira",
       num: "320",
-      bairro: "Praia do Futuro I",
+      bairro: "De Lourdes",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -3786,8 +3805,8 @@ class Local {
   {
     nome: "REMBRANDT VAN RIJN",
     nomeSimplificado: "rembrandt van rijn",
-    lat: "-22.994420",
-    lon: "-43253630.000000",
+    lat: "-22.994514",
+    lon: "-43.253512",
     ativo: true,
     tipo: "não definido",
     dvr: [
@@ -5243,6 +5262,25 @@ class Local {
       num: "136",
       bairro: "Pedra",
       cidade: "Eusébio",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "VINA DEL MAR (Em Implantação)",
+    nomeSimplificado: "vina del mar (em implantacao)",
+    lat: "-3.731146",
+    lon: "-38.478434",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Oliveira Viana",
+      num: "290",
+      bairro: "Vicente Pinzon",
+      cidade: "Fortaleza",
       sigla: "CE"
     }
   },
