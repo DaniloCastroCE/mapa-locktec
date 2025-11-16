@@ -430,6 +430,7 @@ function carregarComTentativas() {
                     }*/
                    setTimeout(() => {
                        alert(`Número máximo de tentativas atingido.\n\nO mapa não foi atualizado.\n\nÚltima atualização realizada em: ${last_update}\n\nRecomendo que tente novamente ou pressione F5 para atualizar a página.`);
+                       console.log(locais.locais)
                        loading.out();
                    },100)
                 }
