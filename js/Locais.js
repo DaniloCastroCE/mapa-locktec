@@ -119,8 +119,8 @@ class Local {
   {
     nome: "ANGRA",
     nomeSimplificado: "angra",
-    lat: "-3.724250",
-    lon: "-38.486320",
+    lat: "-3.724322",
+    lon: "-38.486048",
     ativo: true,
     tipo: "não definido",
     dvr: [
@@ -197,7 +197,7 @@ class Local {
     nomeSimplificado: "aroeira",
     lat: "-23.587320",
     lon: "-46.632710",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -269,11 +269,30 @@ class Local {
     }
   },
   {
+    nome: "ASSOCIACAO NOSSA RUA (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "associacao nossa rua (em implantacao)",
+    lat: "-22.936997",
+    lon: "-43.238071",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Olegário Mariano",
+      num: "53",
+      bairro: "Tijuca",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
+    }
+  },
+  {
     nome: "ATALAIA",
     nomeSimplificado: "atalaia",
     lat: "-3.728120",
     lon: "-38.498930",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -288,27 +307,8 @@ class Local {
     }
   },
   {
-    nome: "ATALANTA",
-    nomeSimplificado: "atalanta",
-    lat: "-3.815260",
-    lon: "-38.468410",
-    ativo: true,
-    tipo: "não definido",
-    dvr: [
-      "não definido"
-    ],
-    locktec: "FORTALEZA",
-    end: {
-      rua: "Avenida Odilon Guimarães",
-      num: "3740",
-      bairro: "Lagoa Redonda",
-      cidade: "Fortaleza",
-      sigla: "CE"
-    }
-  },
-  {
-    nome: "ATHALANTA",
-    nomeSimplificado: "athalanta",
+    nome: "ATHALANTA (Rua Leonardo Mota/meireles)",
+    nomeSimplificado: "athalanta (rua leonardo mota/meireles)",
     lat: "-3.729470",
     lon: "-38.494080",
     ativo: true,
@@ -321,6 +321,25 @@ class Local {
       rua: "Leonardo Mota",
       num: "340",
       bairro: "Meireles",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "ATLANTA (Av. Odilon Guimarães/lagoa Redonda)",
+    nomeSimplificado: "atlanta (av. odilon guimaraes/lagoa redonda)",
+    lat: "-3.815260",
+    lon: "-38.468410",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Avenida Odilon Guimarães",
+      num: "3740",
+      bairro: "Lagoa Redonda",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -672,7 +691,7 @@ class Local {
     nomeSimplificado: "carmel atlantico",
     lat: "-3.746930",
     lon: "-38.456650",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -684,6 +703,25 @@ class Local {
       bairro: "Praia do Futuro I",
       cidade: "Fortaleza",
       sigla: "CE"
+    }
+  },
+  {
+    nome: "CAROL (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "carol (em implantacao)",
+    lat: "-22.985088",
+    lon: "-43.211498",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Aníbal de Mendonça",
+      num: "37",
+      bairro: "Ipanema",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
     }
   },
   {
@@ -782,6 +820,25 @@ class Local {
     }
   },
   {
+    nome: "CHARLES DE GAULLE (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "charles de gaulle (em implantacao)",
+    lat: "-3.740092",
+    lon: "-38.492890",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Eduardo Garcia",
+      num: "717",
+      bairro: "Aldeota",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "CHATEAU BLANC",
     nomeSimplificado: "chateau blanc em implantacao",
     lat: "-22.965923",
@@ -817,6 +874,25 @@ class Local {
       bairro: "Casa Amarela",
       cidade: "Recife",
       sigla: "PE"
+    }
+  },
+  {
+    nome: "CIDADE LESTE (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "cidade leste (em implantacao)",
+    lat: "-3.748377",
+    lon: "-38.471188",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Andrade Furtado",
+      num: "2105",
+      bairro: "Cidade 2000",
+      cidade: "Fortaleza",
+      sigla: "CE"
     }
   },
   {
@@ -915,20 +991,39 @@ class Local {
     }
   },
   {
-    nome: "CORTINA D'AMPEZZO",
-    nomeSimplificado: "cortina d'ampezzo",
+    nome: "CONJUNTO RESIDENCIAL VILLA LOBOS",
+    nomeSimplificado: "conjunto residencial villa lobos",
+    lat: "-3.744477",
+    lon: "-38.491290",
+    ativo: true,
+    tipo: "alarme",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Fonseca Lobo",
+      num: "1355",
+      bairro: "Aldeota",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "CORTINA D'AMPEZZO (Em Implantação)",
+    nomeSimplificado: "cortina d'ampezzo (em implantacao)",
     lat: "-22.900338",
     lon: "-43.286402",
-    ativo: false,
+    ativo: true,
     tipo: "não definido",
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Santos Titara",
       num: "138",
-      bairro: "Todos os Santos",
+      bairro: "Todos Os Santos",
       cidade: "Rio de Janeiro",
       sigla: "RJ"
     }
@@ -1204,7 +1299,7 @@ class Local {
     nomeSimplificado: "edificio brooksville",
     lat: "-3.741110",
     lon: "-38.492420",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -1223,14 +1318,14 @@ class Local {
     nomeSimplificado: "edificio buckingahn",
     lat: "-3.726080",
     lon: "-38.501640",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
     ],
     locktec: "FORTALEZA",
     end: {
-      rua: "José VIlar",
+      rua: "José Vilar",
       num: "180",
       bairro: "Meireles",
       cidade: "Fortaleza",
@@ -1276,11 +1371,30 @@ class Local {
     }
   },
   {
+    nome: "EDIFÍCIO TERRACES LA MAISON",
+    nomeSimplificado: "edificio terraces la maison",
+    lat: "-3.727680",
+    lon: "-38.498120",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Osvaldo Cruz",
+      num: "250",
+      bairro: "Meireles",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "EDIFÍCIO TURANDOT",
     nomeSimplificado: "edificio turandot",
     lat: "-3.735558",
     lon: "-38.474554",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -1292,6 +1406,25 @@ class Local {
       bairro: "Papicu",
       cidade: "Fortaleza",
       sigla: "CE"
+    }
+  },
+  {
+    nome: "ESCRITÓRIO RJ",
+    nomeSimplificado: "escritorio rj",
+    lat: "-22.902180",
+    lon: "-43.184355",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Avenida Passos",
+      num: "115",
+      bairro: "Centro",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
     }
   },
   {
@@ -1330,6 +1463,25 @@ class Local {
       bairro: "Meireles",
       cidade: "Fortaleza",
       sigla: "CE"
+    }
+  },
+  {
+    nome: "EUGENIO RODRIGUES (Em Implantação)",
+    nomeSimplificado: "eugenio rodrigues (em implantacao)",
+    lat: "-22.922064",
+    lon: "-43.258402",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Barão do Bom Retiro",
+      num: "2631",
+      bairro: "Grajaú",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
     }
   },
   {
@@ -1409,6 +1561,25 @@ class Local {
     }
   },
   {
+    nome: "FLORIDA RESIDENCE",
+    nomeSimplificado: "florida residence",
+    lat: "-3.781588",
+    lon: "-38.486225",
+    ativo: true,
+    tipo: "alarme",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Hélio da Silveira Reis",
+      num: "450",
+      bairro: "Engenheiro Luciano Cavalcante",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "FREGUESIA TOWER",
     nomeSimplificado: "freguesia tower",
     lat: "-22.944100",
@@ -1475,12 +1646,12 @@ class Local {
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Paula Brito",
       num: "350",
       bairro: "Andarí",
-      cidade: "RJ",
+      cidade: "Rio de Janeiro",
       sigla: "RJ"
     }
   },
@@ -1556,6 +1727,25 @@ class Local {
       rua: "Ministro Eduardo Ellery Barreira",
       num: "60",
       bairro: "Guararapes",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "GREEN VILLE",
+    nomeSimplificado: "green ville",
+    lat: "-3.747990",
+    lon: "-38.472230",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Andrade Furtado",
+      num: "1977",
+      bairro: "Cocó",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -1660,7 +1850,7 @@ class Local {
     nomeSimplificado: "high point",
     lat: "-23.627250",
     lon: "-46.724010",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -1774,7 +1964,7 @@ class Local {
     nomeSimplificado: "ilha de capri",
     lat: "-23.649320",
     lon: "-46.634900",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -1878,7 +2068,7 @@ class Local {
     end: {
       rua: "Visconde de Cairu",
       num: "720",
-      bairro: "Jardim Guanabara",
+      bairro: "Vicente Pinzon",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -1979,8 +2169,8 @@ class Local {
     }
   },
   {
-    nome: "ITAPUAMA II (Em Implantação)",
-    nomeSimplificado: "itapuama ii em implantacao",
+    nome: "ITAPUAMA II",
+    nomeSimplificado: "itapuama ii",
     lat: "-8.295170",
     lon: "-34.954200",
     ativo: true,
@@ -2012,6 +2202,25 @@ class Local {
       rua: "Antônio Perreira do Nascimento",
       num: "160",
       bairro: "Luzano Viana",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "JARDIM DAS TULHERIAS (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "jardim das tulherias (em implantacao)",
+    lat: "-3.747750",
+    lon: "-38.473069",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Andrade Furtado",
+      num: "1915",
+      bairro: "Cocó",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -2112,6 +2321,25 @@ class Local {
     }
   },
   {
+    nome: "JOSÉ EUGENIO RODRIGUES",
+    nomeSimplificado: "jose eugenio rodrigues",
+    lat: "-22.922050",
+    lon: "-43.258425",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Barão do Bom Retiro",
+      num: "2631",
+      bairro: "Grajaú",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
+    }
+  },
+  {
     nome: "KARIBE",
     nomeSimplificado: "karibe",
     lat: "-3.735160",
@@ -2190,18 +2418,18 @@ class Local {
   {
     nome: "LA VIDA PARQUE",
     nomeSimplificado: "la vida parque",
-    lat: "-3.909150",
-    lon: "-38.447850",
+    lat: "-3.908955",
+    lon: "-38.447896",
     ativo: true,
     tipo: "não definido",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
-      rua: "Avenida Noe Leite de Freitas",
+      rua: "Avenida Noé Leite de Freitas",
       num: "393",
-      bairro: "Lagoinha",
+      bairro: "Parque Havai",
       cidade: "Eusébio",
       sigla: "CE"
     }
@@ -2325,7 +2553,7 @@ class Local {
     nomeSimplificado: "lisboa",
     lat: "-3.740840",
     lon: "-38.504200",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -2397,27 +2625,8 @@ class Local {
     }
   },
   {
-    nome: "GREEN VILLE",
+    nome: "LOURDES SABOIA",
     nomeSimplificado: "lourdes saboia",
-    lat: "-3.747990",
-    lon: "-38.472230",
-    ativo: true,
-    tipo: "não definido",
-    dvr: [
-      "não definido"
-    ],
-    locktec: "FORTALEZA",
-    end: {
-      rua: "Andrade Furtado",
-      num: "1977",
-      bairro: "Cocó",
-      cidade: "Fortaleza",
-      sigla: "CE"
-    }
-  },
-  {
-    nome: "LOURDES SABOIA (Em Implantação)",
-    nomeSimplificado: "lourdes saboia em implantacao",
     lat: "-3.742920",
     lon: "-38.492780",
     ativo: true,
@@ -2507,6 +2716,25 @@ class Local {
       num: "8069",
       bairro: "Maria Paula",
       cidade: "São Gonçalo",
+      sigla: "RJ"
+    }
+  },
+  {
+    nome: "MAESTRO FRANCISCO BRAGA",
+    nomeSimplificado: "maestro francisco braga",
+    lat: "-22.966159",
+    lon: "-43.191038",
+    ativo: true,
+    tipo: "portaria",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Maestro Francisco Braga",
+      num: "295",
+      bairro: "Copacabana",
+      cidade: "Rio de Janeiro",
       sigla: "RJ"
     }
   },
@@ -2752,7 +2980,7 @@ class Local {
     end: {
       rua: "Avenida Zeze Diogo",
       num: "2970",
-      bairro: "Praia do Futuro",
+      bairro: "Praia do Futuro I",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -2767,12 +2995,12 @@ class Local {
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Belisário Távora",
       num: "231",
       bairro: "Laranjeiras",
-      cidade: "Rio de janeiro",
+      cidade: "Rio de Janeiro",
       sigla: "RJ"
     }
   },
@@ -2853,8 +3081,8 @@ class Local {
     }
   },
   {
-    nome: "MILENIUM",
-    nomeSimplificado: "milenium",
+    nome: "MILLENIUM",
+    nomeSimplificado: "millenium",
     lat: "-22.938280",
     lon: "-43.336970",
     ativo: true,
@@ -2862,11 +3090,11 @@ class Local {
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Comandante Rúbens Silva",
       num: "323",
-      bairro: "Freguesia (Jacarepaguá)",
+      bairro: "Freguesia (jacarepaguá)",
       cidade: "Rio de Janeiro",
       sigla: "RJ"
     }
@@ -2950,17 +3178,17 @@ class Local {
   {
     nome: "MONT BLANC",
     nomeSimplificado: "mont blanc",
-    lat: "-22.982935",
-    lon: "-43.201595",
+    lat: "-22.983331",
+    lon: "-43.201691",
     ativo: true,
     tipo: "não definido",
     dvr: [
-      "não definido"
+      "simplus"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "RIO DE JANEITO",
     end: {
       rua: "Barão da Torre",
-      num: "192",
+      num: "195",
       bairro: "Ipanema",
       cidade: "Rio de Janeiro",
       sigla: "RJ"
@@ -3157,6 +3385,25 @@ class Local {
     }
   },
   {
+    nome: "NOSSA SENHORA DE FATIMA I",
+    nomeSimplificado: "nossa senhora de fatima i",
+    lat: "-3.820147",
+    lon: "-38.561846",
+    ativo: true,
+    tipo: "portaria",
+    dvr: [
+      "hikvision"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Antonio Luiz de Almeida Vale",
+      num: "63",
+      bairro: "Mondubim",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "NOVELLETO",
     nomeSimplificado: "novelleto",
     lat: "-23.526110",
@@ -3228,6 +3475,25 @@ class Local {
       rua: "Pereira Valente",
       num: "945",
       bairro: "Meireles",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "ORANJE (Em Implantação)",
+    nomeSimplificado: "oranje (em implantacao)",
+    lat: "-3.786160",
+    lon: "-38.562611",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Doutor Manuel Teófilo",
+      num: "955",
+      bairro: "Itaperi",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -3351,7 +3617,7 @@ class Local {
     nomeSimplificado: "parque dos coqueiros",
     lat: "-3.789200",
     lon: "-38.572280",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -3379,7 +3645,7 @@ class Local {
     end: {
       rua: "Avenida Engenheiro Luiz Vieira",
       num: "320",
-      bairro: "Praia do Futuro I",
+      bairro: "De Lourdes",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -3522,7 +3788,7 @@ class Local {
     nomeSimplificado: "porto principe",
     lat: "-3.808400",
     lon: "-38.535480",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
@@ -3670,6 +3936,25 @@ class Local {
     }
   },
   {
+    nome: "QUEOPS QUEFREN MIQUERINOS",
+    nomeSimplificado: "queops quefren miquerinos",
+    lat: "-3.729632",
+    lon: "-38.492064",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Silva Jatahy",
+      num: "1268",
+      bairro: "Meireles",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "RAIMUNDO MORAES",
     nomeSimplificado: "raimundo moraes",
     lat: "-3.750820",
@@ -3746,21 +4031,21 @@ class Local {
     }
   },
   {
-    nome: "REMBRANDT VAN RIJN (Em Implantação)",
-    nomeSimplificado: "rembrandt van rijn em implantacao",
-    lat: "-22.994420",
-    lon: "-43253630",
+    nome: "REMBRANDT VAN RIJN",
+    nomeSimplificado: "rembrandt van rijn",
+    lat: "-22.994514",
+    lon: "-43.253512",
     ativo: true,
     tipo: "não definido",
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Avenidade Niemeyer",
       num: "965",
       bairro: "São Conrado",
-      cidade: "Rio de janeiro",
+      cidade: "Rio de Janeiro",
       sigla: "RJ"
     }
   },
@@ -3841,6 +4126,44 @@ class Local {
     }
   },
   {
+    nome: "RESIDENCIAL INÊS BEZERRA",
+    nomeSimplificado: "residencial ines bezerra",
+    lat: "-3.740302",
+    lon: "-38.504114",
+    ativo: true,
+    tipo: "alarme",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Tibúrcio Cavalcante",
+      num: "1780",
+      bairro: "Aldeota",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "RESIDENCIAL URUPES",
+    nomeSimplificado: "residencial urupes",
+    lat: "-3.808623",
+    lon: "-38.592197",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Avenida Contôrno Norte",
+      num: "1800",
+      bairro: "Novo Mondubim",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "RIO VERDE",
     nomeSimplificado: "rio verde",
     lat: "-23.526360",
@@ -3917,10 +4240,10 @@ class Local {
     }
   },
   {
-    nome: "RIVIEIRA",
-    nomeSimplificado: "rivieira",
-    lat: "-3.725630",
-    lon: "-38.462540",
+    nome: "RIVIERA",
+    nomeSimplificado: "riviera",
+    lat: "-3.725835",
+    lon: "-38.462998",
     ativo: true,
     tipo: "não definido",
     dvr: [
@@ -4069,8 +4392,8 @@ class Local {
     }
   },
   {
-    nome: "SAN MATHEUS",
-    nomeSimplificado: "san matheus",
+    nome: "SAN MATHEUS (Rua Olegário Memória/sapiranga)",
+    nomeSimplificado: "san matheus (rua olegario memoria/sapiranga)",
     lat: "-3.790470",
     lon: "-38.463780",
     ativo: true,
@@ -4088,8 +4411,8 @@ class Local {
     }
   },
   {
-    nome: "SAN MATHEUS",
-    nomeSimplificado: "san matheus",
+    nome: "SAN MATHEUS (Rua Rocha Lima/centro)",
+    nomeSimplificado: "san matheus (rua rocha lima/centro)",
     lat: "-3.736150",
     lon: "-38.522870",
     ativo: true,
@@ -4121,7 +4444,7 @@ class Local {
       rua: "Joaquim Floriano",
       num: "636",
       bairro: "Itaim Bibi",
-      cidade: "São paulo",
+      cidade: "São Paulo",
       sigla: "SP"
     }
   },
@@ -4373,6 +4696,25 @@ class Local {
     }
   },
   {
+    nome: "SOLAR DAS MANGUEIRAS (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "solar das mangueiras (em implantacao)",
+    lat: "-22.938598",
+    lon: "-43.194600",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "RIO DE JANEITO",
+    end: {
+      rua: "Ruas das Laranjeiras",
+      num: "575",
+      bairro: "Laranjeiras",
+      cidade: "Rio de Janeiro",
+      sigla: "RJ"
+    }
+  },
+  {
     nome: "SOPHIA MARINHO",
     nomeSimplificado: "sophia marinho",
     lat: "-3.725490",
@@ -4510,12 +4852,12 @@ class Local {
     nomeSimplificado: "sunny side",
     lat: "-22.458944",
     lon: "-43.156645",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Estrada do Carangola",
       num: "1953",
@@ -4560,25 +4902,6 @@ class Local {
       bairro: "Cordeiro",
       cidade: "Recife",
       sigla: "PE"
-    }
-  },
-  {
-    nome: "TERRACES LA MAISON",
-    nomeSimplificado: "terraces la maison",
-    lat: "-3.727680",
-    lon: "-38.498120",
-    ativo: true,
-    tipo: "não definido",
-    dvr: [
-      "não definido"
-    ],
-    locktec: "FORTALEZA",
-    end: {
-      rua: "Osvaldo Cruz",
-      num: "250",
-      bairro: "Meireles",
-      cidade: "Fortaleza",
-      sigla: "CE"
     }
   },
   {
@@ -5019,6 +5342,25 @@ class Local {
     }
   },
   {
+    nome: "VILLA PASSAREDO",
+    nomeSimplificado: "villa passaredo",
+    lat: "-3.778288",
+    lon: "-38.485888",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Manoel Lima Soares",
+      num: "740",
+      bairro: "Engenheiro Luciano Cavalcante",
+      cidade: "Fortaleza",
+      sigla: "CE"
+    }
+  },
+  {
     nome: "VILLA REAL",
     nomeSimplificado: "villa real",
     lat: "-3.790920",
@@ -5076,7 +5418,7 @@ class Local {
     }
   },
   {
-    nome: "VILLAGE ÁGUA FRIA (QUADRA 01)",
+    nome: "VILLAGE ÁGUA FRIA (Quadra 01)",
     nomeSimplificado: "village agua fria (quadra 01)",
     lat: "-3.775510",
     lon: "-38.472730",
@@ -5095,7 +5437,7 @@ class Local {
     }
   },
   {
-    nome: "VILLAGE ÁGUA FRIA (QUADRA 02)",
+    nome: "VILLAGE ÁGUA FRIA (Quadra 02)",
     nomeSimplificado: "village agua fria (quadra 02)",
     lat: "-3.776330",
     lon: "-38.472980",
@@ -5118,12 +5460,12 @@ class Local {
     nomeSimplificado: "village das pedras",
     lat: "-22.931384",
     lon: "-42.898232",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "",
     end: {
       rua: "Doutor Creso Ribeiro",
       num: "S/N",
@@ -5186,6 +5528,25 @@ class Local {
       num: "136",
       bairro: "Pedra",
       cidade: "Eusébio",
+      sigla: "CE"
+    }
+  },
+  {
+    nome: "VINA DEL MAR",
+    nomeSimplificado: "vina del mar",
+    lat: "-3.731146",
+    lon: "-38.478434",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Oliveira Viana",
+      num: "290",
+      bairro: "Vicente Pinzon",
+      cidade: "Fortaleza",
       sigla: "CE"
     }
   },
@@ -5270,12 +5631,12 @@ class Local {
     nomeSimplificado: "vivendas do maracana",
     lat: "-22.914850",
     lon: "-43.231430",
-    ativo: true,
+    ativo: false,
     tipo: "não definido",
     dvr: [
       "não definido"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "RIO DE JANEITO",
     end: {
       rua: "Isidro de Figueiredo",
       num: "26",
