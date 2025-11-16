@@ -1,4 +1,4 @@
-const last_update = "25/08/2025"
+const last_update = "16/11/2025"
 const loading = new Loading('loading')
 const mapa = new Mapa([-3.74565, -38.51723], 14, new GeoJson())
 const locais = new Local()
@@ -417,7 +417,7 @@ function carregarComTentativas() {
                 tentativas--;
                 if (tentativas > 0) {
                     console.log(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
-                    alert(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
+                    //alert(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
                     setTimeout(() => {
                         carregarComTentativas();
                     }, 3500)
