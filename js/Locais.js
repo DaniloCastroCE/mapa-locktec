@@ -8,9 +8,9 @@ class Local {
     lat: "-3.772874",
     lon: "-38.469882",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria autônoma",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
@@ -24,12 +24,12 @@ class Local {
   {
     nome: "ALAMEDA DOS PINHEIROS VI",
     nomeSimplificado: "alameda dos pinheiros vi",
-    lat: "-8.187534",
+    lat: "-8.187533",
     lon: "-35.578948",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "RECIFE",
     end: {
@@ -46,9 +46,9 @@ class Local {
     lat: "-3.726390",
     lon: "-38.502350",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
@@ -67,9 +67,9 @@ class Local {
     ativo: true,
     tipo: "não definido",
     dvr: [
-      "não definido"
+      "simplus"
     ],
-    locktec: "RIO DE JANEIRO",
+    locktec: "RIO DE JANEITO",
     end: {
       rua: "Presidente Pedreira",
       num: "89",
@@ -84,9 +84,9 @@ class Local {
     lat: "-23.530273",
     lon: "-46.718856",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "SÃO PAULO",
     end: {
@@ -103,9 +103,9 @@ class Local {
     lat: "-3.752275",
     lon: "-38.503890",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
@@ -122,9 +122,9 @@ class Local {
     lat: "-3.724322",
     lon: "-38.486048",
     ativo: true,
-    tipo: "não definido",
+    tipo: "alarme",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
@@ -143,7 +143,7 @@ class Local {
     ativo: true,
     tipo: "não definido",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
@@ -157,12 +157,12 @@ class Local {
   {
     nome: "ARMANDO RABELO",
     nomeSimplificado: "armando rabelo",
-    lat: "-8.045250",
+    lat: "-8.045249",
     lon: "-34.892533",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "RECIFE",
     end: {
@@ -1200,25 +1200,6 @@ class Local {
     }
   },
   {
-    nome: "DOMÍNIO LOCKTEC",
-    nomeSimplificado: "dominio locktec",
-    lat: "-23.610390",
-    lon: "-46.639210",
-    ativo: true,
-    tipo: "não definido",
-    dvr: [
-      "não definido"
-    ],
-    locktec: "SEDE",
-    end: {
-      rua: "Pitangueiras",
-      num: "167",
-      bairro: "Vila Saúde",
-      cidade: "São Paulo",
-      sigla: "SP"
-    }
-  },
-  {
     nome: "DORMAR",
     nomeSimplificado: "dormar",
     lat: "-8.063112",
@@ -1466,25 +1447,6 @@ class Local {
     }
   },
   {
-    nome: "EUGENIO RODRIGUES (Em Implantação)",
-    nomeSimplificado: "eugenio rodrigues (em implantacao)",
-    lat: "-22.922064",
-    lon: "-43.258402",
-    ativo: true,
-    tipo: "não definido",
-    dvr: [
-      "não definido"
-    ],
-    locktec: "RIO DE JANEITO",
-    end: {
-      rua: "Barão do Bom Retiro",
-      num: "2631",
-      bairro: "Grajaú",
-      cidade: "Rio de Janeiro",
-      sigla: "RJ"
-    }
-  },
-  {
     nome: "EUROPA BOULEVARD",
     nomeSimplificado: "europa boulevard",
     lat: "-3.803337",
@@ -1539,6 +1501,25 @@ class Local {
       bairro: "Boa Viagem",
       cidade: "Recife",
       sigla: "PE"
+    }
+  },
+  {
+    nome: "FERNANDES & MARTINS ADVOGADOS (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "fernandes & martins advogados (em implantacao)",
+    lat: "-3.734566",
+    lon: "-38.485702",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "FORTALEZA",
+    end: {
+      rua: "Pereira Valente",
+      num: "1645",
+      bairro: "Varjota",
+      cidade: "Fortaleza",
+      sigla: "CE"
     }
   },
   {
@@ -2592,9 +2573,9 @@ class Local {
     lat: "-3.730170",
     lon: "-38.480570",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "SEDE",
     end: {
@@ -2603,6 +2584,25 @@ class Local {
       bairro: "Vicente Pinzon",
       cidade: "Fortaleza",
       sigla: "CE"
+    }
+  },
+  {
+    nome: "LOCKTEC SAO PAULO",
+    nomeSimplificado: "locktec sao paulo",
+    lat: "-23.610390",
+    lon: "-46.639210",
+    ativo: true,
+    tipo: "alarme",
+    dvr: [
+      "simplus"
+    ],
+    locktec: "SEDE",
+    end: {
+      rua: "Pitangueiras",
+      num: "167",
+      bairro: "Vila Saúde",
+      cidade: "São Paulo",
+      sigla: "SP"
     }
   },
   {
@@ -2638,7 +2638,7 @@ class Local {
     end: {
       rua: "Coronel Jucá",
       num: "1275",
-      bairro: "Meireles",
+      bairro: "Aldeota",
       cidade: "Fortaleza",
       sigla: "CE"
     }
@@ -4506,6 +4506,25 @@ class Local {
     }
   },
   {
+    nome: "SANTA HELENA (EM IMPLANTAÇÃO)",
+    nomeSimplificado: "santa helena (em implantacao)",
+    lat: "-23.647654",
+    lon: "-46.664530",
+    ativo: true,
+    tipo: "não definido",
+    dvr: [
+      "não definido"
+    ],
+    locktec: "SÃO PAULO",
+    end: {
+      rua: "Jovina",
+      num: "353",
+      bairro: "Vila Mascote",
+      cidade: "São Paulo",
+      sigla: "SP"
+    }
+  },
+  {
     nome: "SANTOS DUMONT",
     nomeSimplificado: "santos dumont",
     lat: "-3.741710",
@@ -5290,13 +5309,13 @@ class Local {
     lat: "-3.732120",
     lon: "-38.461520",
     ativo: true,
-    tipo: "não definido",
+    tipo: "portaria remota",
     dvr: [
-      "não definido"
+      "simplus"
     ],
     locktec: "FORTALEZA",
     end: {
-      rua: "Oliveira FIlho",
+      rua: "Oliveira Filho",
       num: "1680",
       bairro: "Vicente Pinzon",
       cidade: "Fortaleza",
