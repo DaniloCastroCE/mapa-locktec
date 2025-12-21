@@ -5688,8 +5688,6 @@ class Local {
         }
       }
 
-
-
     } catch (error) {
       this.locais = this.locaisAux
       //console.log(this.getCountCond())
