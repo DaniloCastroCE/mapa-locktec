@@ -5670,10 +5670,12 @@ class Local {
 
   async carregarLocaisApi() {
     try {
-      const response = await fetch('https://3n44fs-3000.csb.app/getCondominios')
+      const response = await fetch('https://mapa-locktec.vercel.app/get/getCondominios')
       const result = await response.json()
 
-      if (result.condominios) {
+      console.log("Result: ", result)
+
+      if (result.status === 'success' && result.condominios) {
         this.locais = result.condominios
         console.log(this.getCountCond())
         return {
