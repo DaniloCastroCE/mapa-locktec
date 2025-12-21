@@ -462,11 +462,13 @@ function confirm_versao () {
     const link_new = 'https://mapa-locktec.vercel.app/';
     
     if (!confirm(`
-    Deseja continuar com a versão antiga do mapa? Clique em OK.
+Deseja continuar com a versão antiga do mapa? 
+
+Clique em OK para continuar com a versão antiga.
     
-    Caso clique em CANCELAR, você será direcionado para o link da versão atualizada.
+Caso clique em CANCELAR, você será direcionado para o link da versão atualizada.
     
-    Link: ${link_new}    
+    ${link_new}    
     `)) {
         window.location.href = link_new;
     }
