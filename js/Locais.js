@@ -5673,11 +5673,9 @@ class Local {
       const response = await fetch('https://mapa-locktec.vercel.app/get/getCondominios')
       const result = await response.json()
 
-      console.log("Result: ", result)
-
       if (result.status === 'success' && result.data) {
         this.locais = result.data
-        console.log("pass: ",this.getCountCond())
+        console.log(this.getCountCond())
         return {
           status: "success",
           message: result.message || "Condominio Atualizado",
