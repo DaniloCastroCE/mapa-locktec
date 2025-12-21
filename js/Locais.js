@@ -5675,12 +5675,12 @@ class Local {
 
       console.log("Result: ", result)
 
-      if (result.status === 'success' && result.condominios) {
-        this.locais = result.condominios
-        console.log(this.getCountCond())
+      if (result.status === 'success' && result.data) {
+        this.locais = result.data
+        console.log("pass: ",this.getCountCond())
         return {
           status: "success",
-          message: "mapa atualizou"
+          message: result.message || "Condominio Atualizado",
         }
       } else {
         this.locais = this.locaisAux
