@@ -402,6 +402,7 @@ function carregarComTentativas() {
     loading.in();
     
     // iniciar sem carregar api
+    locais.locais = locais.locaisAux
     init();
     loading.out();
     // fim
