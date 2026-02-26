@@ -400,8 +400,13 @@ let tentativas = 1;
 
 function carregarComTentativas() {
     loading.in();
-
-    locais.carregarLocaisApi()
+    
+    // iniciar sem carregar api
+    init();
+    loading.out();
+    // fim
+    
+    /*locais.carregarLocaisApi()
         .then((result) => {
             if (!result) {
                 console.error("A resposta da API não retornou um objeto válido!");
@@ -424,10 +429,10 @@ function carregarComTentativas() {
                 } else {
                     init();
                     console.log('Número máximo de tentativas atingido.');
-                    /*if(confirm('Deseja reiniciar novamente')){
-                      tentativas = 3
-                      return carregarComTentativas();
-                    }*/
+                    //if(confirm('Deseja reiniciar novamente')){
+                    //  tentativas = 3
+                    //  return carregarComTentativas();
+                    //}
                    setTimeout(() => {
                        console.warn("Locais: ",locais.locais)
                        alert(`Número máximo de tentativas atingido.\n\nO mapa não foi atualizado.\n\nÚltima atualização realizada em: ${last_update}\n\nRecomendo que tente novamente ou pressione F5 para atualizar a página.`);
@@ -448,14 +453,16 @@ function carregarComTentativas() {
             } else {
                 init();
                 console.log('Número máximo de tentativas atingido.');
-                /*if(confirm('Deseja reiniciar novamente')){
-                    tentativas = 3
-                    return carregarComTentativas();
-                }*/
+                //if(confirm('Deseja reiniciar novamente')){
+                //    tentativas = 3
+                //    return carregarComTentativas();
+                //}
                 alert(`Número máximo de tentativas atingido.\n\nO mapa não foi atualizado.\n\nÚltima atualização realizada em: ${last_update}\n\nRecomendo que tente novamente ou pressione F5 para atualizar a página.`);
                 loading.out();
             }
-        });
+        });*/
+
+    
 }
 
 function confirm_versao () {
