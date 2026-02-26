@@ -396,7 +396,7 @@ const onclickBtnExibir = (op) => {
     }
 }
 
-let tentativas = 3;
+let tentativas = 1;
 
 function carregarComTentativas() {
     loading.in();
