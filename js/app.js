@@ -401,13 +401,8 @@ let tentativas = 1;
 function carregarComTentativas() {
     loading.in();
     
-    // iniciar sem carregar api
-    locais.locais = locais.locaisAux
-    init();
-    loading.out();
-    // fim
     
-    /*locais.carregarLocaisApi()
+    locais.carregarLocaisApi()
         .then((result) => {
             if (!result) {
                 console.error("A resposta da API não retornou um objeto válido!");
@@ -461,9 +456,7 @@ function carregarComTentativas() {
                 alert(`Número máximo de tentativas atingido.\n\nO mapa não foi atualizado.\n\nÚltima atualização realizada em: ${last_update}\n\nRecomendo que tente novamente ou pressione F5 para atualizar a página.`);
                 loading.out();
             }
-        });*/
-
-    
+        });    
 }
 
 function confirm_versao () {
@@ -482,6 +475,15 @@ Caso clique em CANCELAR, você será direcionado para o link da versão atualiza
     }
 }
 
-confirm_versao()
-carregarComTentativas();
+function carragerSemtentativas () {
+    loading.in()
+    locais.locais = locais.locaisAux
+    init();
+    alert(`Última atualização do mapa foi ${last_update}`)
+    loading.out()
+}
+
+confirm_versao();
+carragerSemtentativas (); // Não realizar uma requisição a API, mas carregar os condominio do locais.locaisAux
+//carregarComTentativas(); // Realizar um get na API para pegar os condominios
 
