@@ -396,7 +396,7 @@ const onclickBtnExibir = (op) => {
     }
 }
 
-let tentativas = 1;
+let tentativas = 3;
 
 function carregarComTentativas() {
     loading.in();
@@ -416,6 +416,9 @@ function carregarComTentativas() {
 
             } else if (result.status === "error") {
                 tentativas--;
+                if(!confirm('Atualização dos condominios falhou\nDeseja tentar novamente?') {
+                    tentativas = 0
+                }
                 if (tentativas > 0) {
                     console.log(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
                     //alert(`Tentativa de atualizar o mapa falhou.\n\nTentativas restantes: ${tentativas}`);
@@ -484,6 +487,6 @@ function carragerSemtentativas () {
 }
 
 confirm_versao();
-carragerSemtentativas (); // Não realizar uma requisição a API, mas carregar os condominio do locais.locaisAux
-//carregarComTentativas(); // Realizar um get na API para pegar os condominios
+//carragerSemtentativas (); // Não realizar uma requisição a API, mas carregar os condominio do locais.locaisAux
+carregarComTentativas(); // Realizar um get na API para pegar os condominios
 
