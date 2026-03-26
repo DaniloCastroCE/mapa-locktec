@@ -5858,8 +5858,9 @@ class Local {
   }
 
   async carregarLocaisApi() {
+    const new_url = 'https://mapa-locktec.vercel.app/get-condos/all'
     try {
-      const response = await fetch('https://mapa-locktec.vercel.app/get/getCondominios')
+      const response = await fetch('https://mapa-locktec-old.vercel.app/get/getCondominios')
       const result = await response.json()
 
       if (result.status === 'success' && result.data) {
