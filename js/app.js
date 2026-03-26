@@ -416,7 +416,7 @@ function carregarComTentativas() {
 
             } else if (result.status === "error") {
                 tentativas--;
-                if(!confirm('Atualização dos condominios falhou\nDeseja tentar novamente?') {
+                if(!confirm('Atualização dos condominios falhou\nDeseja tentar novamente?')) {
                     tentativas = 0
                 }
                 if (tentativas > 0) {
